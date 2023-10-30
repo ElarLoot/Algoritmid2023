@@ -1,0 +1,18 @@
+4. a) Halvimal juhul on ajakompleksus O(n^2) järgmistel sortimisalgoritmidel:
+
+Bubble Sort
+Selection Sort
+Insertion Sort
+
+Need kolm algoritmi kasutavad kaks pesa (nurka), et korraldada loendit, ja nad vajavad n-1 sammu suurima elemendi õigesse kohta paigutamiseks. 
+See toob kaasa n-1 sammu esimese elemendi paigutamiseks, n-2 sammu teise elemendi paigutamiseks jne, mis viib ajakompleksuseni O(n^2) halvimal juhul.
+
+b) Kui loendi elemendid jäävad vahemikku 1 kuni 100, siis oleks kõige sobivam sortimisalgoritm Counting Sort. Counting Sort on tõhus, 
+kui sorteeritavate elementide vahemik on väike võrreldes loendi pikkusega. Selle põhjuseks on see, et Counting Sort ei kasuta võrdlusi elementide vahel, mis teeb selle eriti kiireks.
+
+Counting Sorti tööpõhimõte:
+
+1. Loo kõigist võimalikest väärtustest (1 kuni 100) loend, kuhu salvestatakse, kui mitu korda iga väärtus esineb algse loendi sees.
+2. Loenda need väärtused uuesti läbi ja loo uus sorteeritud loend.
+Kuna elementide väärtused on piiratud vahemikuga 1 kuni 100, ei sõltu Counting Sorti ajakompleksus loendi suurusest n, vaid väärtuste vahemiku suurusest. 
+Selle tulemuseks on ajakompleksus O(k), kus k on väärtuste vahemik (100 selles juhul), mis on palju kiirem kui O(n^2). Seega on Counting Sort kõige sobivam valik antud vahemikus olevate täisarvude sorteerimiseks.
