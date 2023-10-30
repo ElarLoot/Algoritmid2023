@@ -1,0 +1,28 @@
+Boonus 
+
+Siin on, kuidas loend [8, 3, 5, 4, 7, 6, 2] näeks välja pärast esimest läbimist iga antud sortimisalgoritmi puhul:
+
+a) Bubble Sort:
+Esimene läbimine Bubble Sortiga hõlmaks järgmisi samme:
+
+Võrdle 8 ja 3: Vahetate kohad, kuna 8 > 3. Loend: [3, 8, 5, 4, 7, 6, 2]
+Võrdle 8 ja 5: Vahetate kohad, kuna 8 > 5. Loend: [3, 5, 8, 4, 7, 6, 2]
+Võrdle 8 ja 4: Vahetate kohad, kuna 8 > 4. Loend: [3, 5, 4, 8, 7, 6, 2]
+Võrdle 8 ja 7: Vahetate kohad, kuna 8 > 7. Loend: [3, 5, 4, 7, 8, 6, 2]
+Võrdle 8 ja 6: Vahetate kohad, kuna 8 > 6. Loend: [3, 5, 4, 7, 6, 8, 2]
+Võrdle 8 ja 2: Vahetate kohad, kuna 8 > 2. Loend: [3, 5, 4, 7, 6, 2, 8]
+
+b) Selection Sort:
+Esimene läbimine Selection Sortiga hõlmaks järgmisi samme:
+
+Leia kõige väiksem element ja vaheta see esimese elemendiga: [2, 3, 5, 4, 7, 6, 8]
+Ülejäänud osa loendist ei muutu, kuna 2 on nüüd esimene element.
+c) Insertion Sort:
+Esimene läbimine Insertion Sortiga hõlmaks järgmisi samme:
+
+8 jääb algseks "sorteeritud osaks" ning vaatame järgmist elementi, mis on 3.
+Võrdle 3 ja 8: Vahetame kohad, kuna 8 > 3. Loend: [3, 8, 5, 4, 7, 6, 2]
+Nüüd on loendi esimene osa sorteeritud, ja jätkame järgmise elemendiga, mis on 5.
+Võrdle 5 ja 8: Vahetame kohad, kuna 8 > 5. Loend: [3, 5, 8, 4, 7, 6, 2]
+Ülejäänud osa loendist ei muutu.
+Need on loendid pärast esimest läbimist iga sortimisalgoritmi puhul. Bubble Sort ja Insertion Sort vahetavad elemente, samas kui Selection Sort liigutab ainult kõige väiksema elemendi algusesse.
