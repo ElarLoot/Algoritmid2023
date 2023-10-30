@@ -1,1 +1,96 @@
-1. 
+1. Samm-sammuline Bubble Sort simulatsioon antud arvude loendi [64, 34, 25, 12, 22, 11, 90] korral
+
+Esimene läbimine:
+
+Võrdle 64 ja 34: Vahetame nad omavahel, kuna 64 > 34.
+Loend: [34, 64, 25, 12, 22, 11, 90]
+
+Võrdle 64 ja 25: Vahetame nad omavahel, kuna 64 > 25.
+Loend: [34, 25, 64, 12, 22, 11, 90]
+
+Võrdle 64 ja 12: Vahetame nad omavahel, kuna 64 > 12.
+Loend: [34, 25, 12, 64, 22, 11, 90]
+
+Võrdle 64 ja 22: Vahetame nad omavahel, kuna 64 > 22.
+Loend: [34, 25, 12, 22, 64, 11, 90]
+
+Võrdle 64 ja 11: Vahetame nad omavahel, kuna 64 > 11.
+Loend: [34, 25, 12, 22, 11, 64, 90]
+
+Võrdle 64 ja 90: Ei vaheta, kuna 64 < 90.
+Loend: [34, 25, 12, 22, 11, 64, 90]
+
+Esimene läbimine lõppes ja asetasime suurima elemedi 90 on nüüd viimasel positsioonil.
+
+Teine läbimine:
+
+Võrdle 34 ja 25: Vahetame nad omavahel, kuna 34 > 25.
+Loend: [25, 34, 12, 22, 11, 64, 90]
+
+Võrdle 34 ja 12: Vahetame nad omavahel, kuna 34 > 12.
+Loend: [25, 12, 34, 22, 11, 64, 90]
+
+Võrdle 34 ja 22: Vahetame nad omavahel, kuna 34 > 22.
+Loend: [25, 12, 22, 34, 11, 64, 90]
+
+Võrdle 34 ja 11: Vahetame nad omavahel, kuna 34 > 11.
+Loend: [25, 12, 22, 11, 34, 64, 90]
+
+Võrdle 34 ja 64: Ei vaheta, kuna 34 < 64.
+Loend: [25, 12, 22, 11, 34, 64, 90]
+
+Teine läbimine lõppes ning asetame kaks suuremat elementi 64 ja 90 viimastele positsioonidele.
+
+Kolmas läbimine:
+
+Võrdle 25 ja 12: Vahetame nad omavahel, kuna 25 > 12.
+Loend: [12, 25, 22, 11, 34, 64, 90]
+
+Võrdle 25 ja 22: Vahetame nad omavahel, kuna 25 > 22.
+Loend: [12, 22, 25, 11, 34, 64, 90]
+
+Võrdle 25 ja 11: Vahetame nad omavahel, kuna 25 > 11.
+Loend: [12, 22, 11, 25, 34, 64, 90]
+
+Võrdle 25 ja 34: Ei vaheta, kuna 25 < 34.
+Loend: [12, 22, 11, 25, 34, 64, 90]
+
+Kolmas läbimine lõppes ja kolm suuremat elementi on nüüd viimastel positsioonidel.
+
+Neljas läbimine:
+
+Võrdle 12 ja 22: Ei vaheta, kuna 12 < 22.
+Loend: [12, 22, 11, 25, 34, 64, 90]
+
+Võrdle 22 ja 11: Vahetame nad omavahel, kuna 22 > 11.
+Loend: [12, 11, 22, 25, 34, 64, 90]
+
+Võrdle 22 ja 25: Ei vaheta, kuna 22 < 25.
+Loend: [12, 11, 22, 25, 34, 64, 90]
+
+Viies läbimine:
+
+Võrdle 12 ja 11: Vahetame nad omavahel, kuna 12 > 11.
+Loend: [11, 12, 22, 25, 34, 64, 90]
+
+Võrdle 12 ja 22: Ei vaheta, kuna 12 < 22.
+Loend: [11, 12, 22, 25, 34, 64, 90]
+
+Kuues läbimine:
+
+Võrdle 11 ja 12: Ei vaheta, kuna 11 < 12.
+Loend: [11, 12, 22, 25, 34, 64, 90]
+
+Võrdle 12 ja 22: Ei vaheta, kuna 12 < 22.
+Loend: [11, 12, 22, 25, 34, 64, 90]
+
+Seitsmes läbimine:
+
+Võrdle 11 ja 12: Ei vaheta, kuna 11 < 12.
+Loend: [11, 12, 22, 25, 34, 64, 90]
+
+Nüüd on loend täielikult sorteeritud Bubble Sort algoritmi abil:
+[11, 12, 22, 25, 34, 64, 90]
+
+
+
