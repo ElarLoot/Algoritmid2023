@@ -1,13 +1,10 @@
-5. a) Stabiilne sortimisalgoritm tähendab, et kui kaks või rohkem elementi omavad võrdset sorteerimisvõtit (sama väärtusega), siis nende järjestus jääb pärast sortimist samaks, 
-nagu oli enne sortimist. See tähendab, et kui me sorteerime loendi, kus on näiteks inimeste nimekirjades, ja kaks inimest on samanimelised, siis stabiilne sortimisalgoritm säilitab nende järjestuse.
-
-Näide stabiilsest sortimisalgoritmist on "Insertion Sort". Kui kasutate Insertion Sorti, et sorteerida inimeste loendit nende sünnikuupäeva järgi, jäävad inimesed, kellel on sama sünnikuupäev, algse järjestuse järjekorda.
+5. a) Stabiilne sortimisalgoritm on selline, mis säilitab järjekorra võrdväärsete elementide vahel. See tähendab, et kui meil on kaks või enam samaväärset elementi, siis pärast sortimist on nende järjekord samaväärsete elementide vahel sama, nagu nad olid enne sorteerimist. Näide stabiilsest sortimisalgoritmist on "Insertion Sort." Kui meil on kaks sama väärtusega elementi loendis ja kasutame Insertion Sorti, siis nende järjekord jääb samaks pärast sorteerimist. See tähendab, et kui meil on näiteks inimeste loend, mis on juba sorteeritud nime ja seejärel vanuse järgi, siis kui me sorteerime selle loendi vanuse järgi, siis jäävad sama vanused inimesed endiselt sorteeritud nime alusel sama järjekorda.
 
 b) Adaptiivne sortimisalgoritm viitab võimele kohanduda sisendi järjestusega ja töötada kiiremini juba osaliselt sorteeritud või peaaegu sorteeritud loenditega. 
 See tähendab, et mida rohkem on loend osaliselt sorteeritud, seda kiiremaks muutub adaptiivne sortimisalgoritm.
 
 Järgmised sortimisalgoritmid peetakse adaptiivseteks:
 
-1. Insertion Sort: See on väga adaptiivne, kuna töötab kiiresti osaliselt sorteeritud loenditega ja vajab vähe võrdlusi ja vahetusi nende puhul.
-2. Bubble Sort: Kuigi Bubble Sort ei ole tavaliselt kiire sortimisalgoritm, on see siiski suhteliselt adaptiivne, kuna töötab kiiresti osaliselt sorteeritud loenditega, vähendades vahetuste arvu.
-Need adaptiivsed sortimisalgoritmid sobivad hästi juhtudel, kus loend on juba osaliselt sorteeritud või kui elementide järjestus ei ole väga häiritud, kuna nad suudavad oluliselt vähendada sortimiseks vajalikku aega nendes olukordades.
+1. Insertion Sort. See on adaptiivne, kuna töötab kiiresti osaliselt sorteeritud loenditega ning vajab vähe võrdlusi ja vahetusi nende puhul.
+2. Bubble Sort. Kuigi Bubble Sort ei ole tavaliselt kiire sortimisalgoritm, on see siiski suhteliselt adaptiivne, kuna töötab kiiresti osaliselt sorteeritud loenditega, vähendades vahetuste arvu.
+Need adaptiivsed sorteerimisalgoritmid sobivad hästi juhtudel, kus loend on juba osaliselt sorteeritud või kui elementide järjestus ei ole väga häiritud, kuna nad suudavad oluliselt vähendada sortimiseks vajalikku aega.
