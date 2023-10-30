@@ -1,0 +1,21 @@
+2. 
+
+1. Algoritm otsib sorteerimata osa kõige väiksema elemendi ja leiab selle indeksi.
+
+2. Seejärel vahetatakse leitud kõige väiksem element sorteerimata osa esimese elemendiga. Selle tulemusena lisatakse leitud väikseim element sorteeritud ossa, ja sorteerimata osa väheneb ühe elemendi võrra.
+
+3. Kordame samme 2 ja 3, kuni sorteerimata osa on tühi. Seejärel on kogu loend sorteeritud
+
+Selection Sorti põhimõte on valida iga sammu ajal leitud sorteerimata osa kõige väiksem element ja tuua see sorteeritud osa algusesse. Algoritm ei vaheta elemente järjestikuses järjekorras, vaid otsib kõige väiksemat elementi ja vahetab selle koheselt sorteeritud osa esimese elemendiga. Seda protsessi korratakse kuni sorteerimata osa on tühi.
+
+Selection Sort on lihtne mõista ja rakendada, kuid selle ajaline keerukus on O(n^2), mis tähendab, et selle efektiivsus halveneb suurte loendite puhul. Seetõttu kasutatakse seda sagedamini harjutusena algoritmide õppimisel kui praktilises tarkvaras, kus tõhusamad sorteerimisalgoritmid, näiteks Quick Sort või Merge Sort, on eelistatud.
+
+
+
+
+
+
+
+
+
+
