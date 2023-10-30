@@ -1,0 +1,18 @@
+3. Insertion Sort on sorteerimisalgoritm, mis sobib hästi osaliselt sorteeritud loendite ja väikeste loendite jaoks. 
+
+Algoritm töötab järgmiselt:
+
+1. Alustuseks peetakse esimest elementi sorteerituks, kuna ühe elemendi puhul on loend juba sorteeritud.
+2. Järgmisena võetakse järgmine element ja võrreldakse seda juba sorteeritud osaga, kuni leitakse õige koht, kuhu see element kuulub.
+3. Uut elementi võrreldakse järjestikku iga juba sorteeritud osaga, ja kui leitakse element, mis on suurem kui uus element, siis liigutatakse suurem element paremale, et teha ruumi uuele elemendile.
+4. Uus element paigutatakse õigesse kohta, mis säilitab järjestatuse.
+5. Seda protsessi korratakse kuni kõik loendi elemendid on sorteeritud.
+
+Miks Insertion Sort võib olla tõhusam osaliselt sorteeritud loendi puhul võrreldes täielikult sortimata loendiga:
+
+Antud on osaliselt sorteeritud loend: [12, 11, 13, 5, 6, 7].
+
+Kui loend on juba osaliselt sorteeritud, siis Insertion Sort ei pea liigutama palju elemente oma õigesse kohta, kuna enamik elemente on juba suuremas osas õiges järjekorras.
+Kuna osa loendist on juba sorteeritud, saab algoritm kiiresti leida õige koha uuele elemendile, ilma et peaks võrdlema kõigi eelnevate elementidega.
+Algoritm lõpetab töö juba siis, kui kogu loend on sorteeritud. See tähendab, et Insertion Sort ei pea jätkama võrdlemist ja liigutamist, kui loend on osaliselt sorteeritud.
+Kokkuvõttes on Insertion Sort tõhusam osaliselt sorteeritud loendi puhul, kuna see ei nõua palju tarbetuid võrdlusi ja liigutusi ning suudab kiiresti lõpetada, kui loend on juba peamiselt sorteeritud.
