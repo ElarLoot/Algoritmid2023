@@ -1,0 +1,48 @@
+Kolmikotsing ja Kahendotsing (Ternary Search vs Binary Search)
+
+
+Ternary Search on otsingualgoritm, mis töötab sarnaselt Binary otsingule, kuid otsib andmestruktuuris kolmandiku (1/3) kaupa. Algoritm toimib järjestikuste kolmandike vaatluse kaudu, 
+kitsendades iga sammu järel otsitavat vahemikku.
+
+Näide
+
+function ternary_search(left, right, key):
+    while left <= right:
+        # Arvutame kolmandiku punktid
+        mid1 = left + (right - left) // 3
+        mid2 = right - (right - left) // 3
+
+        # Kas võti on ühes kolmandikus?
+        if arr[mid1] == key:
+            return mid1
+        elif arr[mid2] == key:
+            return mid2
+
+        # Otsime järgmises kolmandikus
+        elif key < arr[mid1]:
+            right = mid1 - 1
+        elif key > arr[mid2]:
+            left = mid2 + 1
+        else:
+            # Võti on teises kolmandikus
+            left = mid1 + 1
+            right = mid2 - 1
+
+    # Võtit ei leitud
+    return -1
+
+
+Ternary Search'i ja Binary Search'i aegkomplekssuse võrdlus
+
+Ternary Search ja Binary Search mõlemad omavad sarnast aegkomplekssust O(log n), kus n on otsitava struktuuri suurus. 
+Kuid Ternary Search'il võib olla mõnevõrra kõrgem peidetud konstant, mis muudab selle praktikas vähem efektiivseks võrreldes Binary otsinguga.
+
+Binary Search vs Ternary Search efektiivsus
+
+Binary Search on üldiselt tõhusam kui Ternary Search enamikus olukordades. Seda seetõttu, et Ternary Search teeb iga sammuga kolmandiku vaatlust, 
+mis võib viia rohkemate sammude tegemiseni kui Binary Search, eriti suurte andmehulkade korral. Binäärotsing teeb iga sammuga poole vähem võrdlusi, mis võib viia kiirema lõpptulemuseni.
+
+Ternary Search võib osutuda kasulikuks ainult siis, kui andmestruktuur on väga suur ja kõnesolevat elementi otsitakse väga spetsiifilises piirkonnas. 
+Mõnel juhul, kui kolmas osa struktuurist on kiiresti kättesaadav, võib Ternary Search olla efektiivne. Siiski on see harvemini kasutatav võrreldes Binäärotsinguga.
+
+
