@@ -1,0 +1,17 @@
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  // leitud, tagasta indeks
+    return -1  // ei leitud
+
+// Testime funktsiooni
+arr = [4, 2, 7, 1, 9, 5]
+target = 7
+tulemus = linear_search(arr, target)
+
+if result != -1:
+    print(f"{target} leiti indeksilt {tulemus}.")
+else:
+    print(f"{target} ei leitud antud massiivist.")
+
+
