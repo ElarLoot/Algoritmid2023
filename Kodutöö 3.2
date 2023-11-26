@@ -1,0 +1,43 @@
+Kahendotsingu (Binary Search) rakendamine ja analüüs
+
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1  # Kui elementi pole massiivis
+
+sorted_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+search_element = 6
+tulemus = binary_search(sorted_array, search_element)
+
+if tulemus != -1:
+    print(f"Element {search_element} leiti indeksilt {tulemus}.")
+else:
+    print(f"Element {search_element} ei leitud massiivist.")
+
+
+Aegkomplekssus
+
+Binary Search: O(log n) - Kuna massiiv on sorteeritud, saab iga sammu järel pool massiivist välistada.
+Linear Search: O(n) - Iga element kontrollitakse järjestikku, kuni leitakse otsitav element või jõutakse massiivi lõppu.
+Näide stsenaariumist, kus Binary Search on kasulikum:
+
+Kui massiiv on suur ja sorteeritud ning otsitav element on massiivis, siis Binary Search on tõhusam kui Linear Search. Näiteks, kui massiivis on miljoneid elemente, 
+siis Binary Search võtab oluliselt vähem samme võrreldes Linear Search'iga.
+
+Selgitus
+
+Linear Search peab vaatama igat elementi järjestikku, mistõttu võtab see aega O(n).
+Binary Search saab iga sammuga välistada poole massiivist, vähendades otsimiseks vajalikke samme logaritmilise keerukusega O(log n). Seega, mida suurem on massiiv, seda suurem on Binary Search'i eelis.
+
+
+
+
+    
