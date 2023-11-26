@@ -23,14 +23,15 @@ else:
     print(f"Element {search_element} ei leitud massiivist.")
 
 
-Aegkomplekssus
+Aegkomplekssuse võrdlus teoreetilises analüüsis
 
-Binary Search: O(log n) - Kuna massiiv on sorteeritud, saab iga sammu järel pool massiivist välistada.
-Linear Search: O(n) - Iga element kontrollitakse järjestikku, kuni leitakse otsitav element või jõutakse massiivi lõppu.
-Näide stsenaariumist, kus Binary Search on kasulikum:
+Lineaarotsingu (Linear Search) aegkomplekssus on O(n), kus n on massiivi pikkus. Kahendotsingu (Binary Search) aegkomplekssus on O(log n), kus log on logaritm alusel. 
+Seega on kahendotsing tavaliselt oluliselt kiirem suurte andmemahtude puhul võrreldes lineaarotsinguga.
 
-Kui massiiv on suur ja sorteeritud ning otsitav element on massiivis, siis Binary Search on tõhusam kui Linear Search. Näiteks, kui massiivis on miljoneid elemente, 
-siis Binary Search võtab oluliselt vähem samme võrreldes Linear Search'iga.
+Näide stsenaariumist, kus Binary Search on kasulikum kui Linear Search
+
+Binary Search on kasulikum juhul, kui massiiv on suur ja sorteeritud. Näiteks, kui meil on suur telefoniraamat ja soovime leida konkreetse isiku telefoni numbri, on kahendotsing efektiivsem kui lineaarotsing. 
+Lineaarotsingu korral peaksime kontrollima igat kirjet järjestikku, samas kui kahendotsing võimaldab kiiresti välistada pool massiivist iga sammu järel, vähendades see läbi oluliselt vajalike sammude arvu.
 
 Selgitus
 
