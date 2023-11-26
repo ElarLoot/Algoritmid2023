@@ -1,0 +1,27 @@
+Fibonacci Search
+
+Fibonacci Search on otsingualgoritm, mis kasutab Fibonacci jada (0, 1, 1, 2, 3, 5, 8, 13, ...) arvusid, et defineerida otsinguintervalli. 
+Algoritm toimib järgmiselt
+
+1. Kui otsinguala algus ja lõpp on määratud, kasutatakse Fibonacci jada elemente, et määratleda kaks uut indeksit: i ja j.
+2. Uus indeks i on eelmine Fibonacci jada element enne j ning uus indeks j on eelmine Fibonacci jada element enne i.
+3. Võrreldakse otsitavat elementi massiivi elemendiga indeksil i.
+4. Sõltuvalt võrdluse tulemusest vähendatakse otsinguintervalli vastavalt Fibonacci jada elementidele.
+
+Kuidas kasutada suuremahuliste andmete sorteeritud massiivides:
+
+Fibonacci Search'i saab kasutada suuremahuliste andmete sorteeritud massiivides, kus on oluline leida element võimalikult efektiivselt. Algoritm võib olla eelistatud eriti siis, 
+kui massiivi suurus on suur ja kui muid otsingualgoritme ei ole otstarbekas kasutada.
+
+
+Stsenaarium, kus Fibonacci Search on efektiivsem:
+
+Kui massiivis on suured, kuid lünklikud väärtuste kogumid.
+
+Miks on Fibonacci Search parem valik:
+
+Kui massiivis on lünklikud alad, kus asuvad otsitavad elemendid, võib Fibonacci Search olla efektiivsem kui näiteks Binary Search või Ternary Search. See tuleneb sellest, 
+et Fibonacci Search suudab kohandada otsinguintervalli vastavalt Fibonacci jada elementidele, võimaldades hüpatud otsinguid, mis võivad lünkades kiiremini soovitud tulemuseni jõuda.
+
+Fibonacci Search võib vähendada vajalikke võrdlusi võrreldes Binary Search'iga, eriti kui otsitav element asub kaugemal ja lünkade tõttu on vaja teha suuremaid hüppeid. 
+Ternary Search võib olla piiratud efektiivsusega, kuna see teeb ainult kaks võrdlust iga iteratsiooni korral, samas kui Fibonacci Search võib teha rohkem hüppeid, mille tulemuseks on kiirem otsing.
