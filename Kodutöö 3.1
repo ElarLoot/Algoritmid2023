@@ -1,17 +1,38 @@
+Lineaarotsing (Linear Search)
+
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
-            return i  // leitud, tagasta indeks
-    return -1  // ei leitud
+            return i  # leitud, tagasta indeks
+    return -1  # ei leitud
 
-// Testime funktsiooni
+# Testime funktsiooni
 arr = [4, 2, 7, 1, 9, 5]
 target = 7
 tulemus = linear_search(arr, target)
 
-if result != -1:
+if tulemus != -1:
     print(f"{target} leiti indeksilt {tulemus}.")
 else:
     print(f"{target} ei leitud antud massiivist.")
+
+
+Aja komplekssus: O(n) ehk lineaarne. Kui massiivi pikkus on n, võib otsing läbida kõik n elemendini.
+Ruumikomplekssus: O(1) ehk konstantne. Algoritm kasutab ainult konstantset hulka täiendavaid muutujaid.
+
+Lineaarotsingu reaalmaailma rakendused
+
+Andmebaasipäringud: Lineaarotsingut kasutatakse andmebaasipäringutes, kus tuleb leida konkreetne kirje suurest andmehulgast.
+Tekstiotsing: Otsides sõna esinemist tekstis, võib kasutada lineaarotsingut.
+Logide analüüs: Kui logides tuleb leida konkreetne sündmus, võib kasutada lineaarotsingut.
+
+Lineaarotsingu reaalmaailma piirangud
+
+Aeglane suurte andmehulkade puhul: Lineaarotsingul on lineaarne aja komplekssus, mis tähendab, et suurte andmehulkade korral võib otsing olla aeglane.
+Mitteoptimaalne suurte andmehulkade jaoks: Muude algoritmide, nagu näiteks binaarne otsing, kasutamine on efektiivsem suurte järjestatud massiivide korral.
+Mitteefektiivne järjestatud massiivide puhul: Kui massiiv ei ole järjestatud, peab lineaarotsing läbima kogu massiivi isegi siis, kui otsitav element on massiivi alguses.
+Lineaarotsing on lihtne ja universaalne, kuid selle kasutamine sõltub probleemi kontekstist ja andmehulkade suurusest.
+
+
 
 
