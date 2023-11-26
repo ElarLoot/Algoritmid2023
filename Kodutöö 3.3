@@ -6,16 +6,10 @@ et massiiv on järjestatud ning töötab sammude kaupa, hüpates kindla arvu ele
 
 Põhiprintsiibid:
 
-Määratakse hüppamise pikkus (jump length) nii, et 
-jump_length
-=
-array_length
-jump_length= 
-array_length
-​
- .
-Algoritm hüppab ettepoole massiivis nii kaua, kuni leitakse vahemik, kus otsitav element võib olla.
-Järgneb lineaarne otsing selle vahemiku sees.
+Sisendiks võtab sorteeritud massiivi ja otsitava elemendi.
+Määrab hüpplaiuse (jump size), mille abil liigub massiivi edasi.
+Alustab massiivi algusest ning liigub hüpplaiuse võrra edasi, kuni leitakse väärtus, mis on suurem või võrdne otsitava elemendiga.
+Seejärel teeb lineaarse otsingu eelneva hüpplaiuse vahemikus, et leida täpne asukoht.
 
 Pseudo-kood:
 
@@ -41,18 +35,23 @@ function jumpSearch(arr, x):
     return -1
 
 
-Ajastuline komplekssus võrreldes Linear Searchi ja Binary Searchiga:
+Ajastuline komplekssus võrreldes Linear Searchi ja Binary Searchiga.
 
-Jump Search: O(log n)
-Binary Search: O(log n)
-Linear Search: O(n)
-Stsenaariumid, kus Jump Search võib olla efektiivsem:
+Jump Search: O(log n) Jump Search kasutab hüpplaiust, mis on tavaliselt määratud ruutjuurena massiivi pikkusest. See pakub paremat tõhusust kui lineaarne otsing, kuid jääb binaarotsingust maha.
+Binary Search: O(log n) Binaarne otsing vähendab massiivi iga sammu järel otsitavate elementide hulka poole võrra. See tagab kiirema leidmise suurte andmestike korral.
+Linear Search: O(n) Lineaarne otsing peab keskmiselt kontrollima poolt massiivist, et leida otsitav element. Seega kasvab aeg lineaarselt sisendi (massiivi suuruse) suurenemisega.
 
-Suure massiivi otsimine: Kui massiiv on suur ja lineaarne otsing on liiga aeglane ning binaarne otsing nõuaks eelnevat sorteerimist, võib Jump Search olla kiire alternatiiv.
 
-Elementidega ebavõrdselt jaotunud massiiv: Kui massiivis on elemendid ebavõrdselt jaotunud ja nende vahe on suur, võib Jump Search olla efektiivsem kui binaarne otsing.
+Stsenaariumid, kus Jump Search võib olla efektiivsem.
 
-Andmete struktuuri piirangud: Kui andmestruktuur ei võimalda otsest indeksi juurdepääsu, kuid võimaldab kiiret hüppamist, võib Jump Search olla kasulik.
+Suure massiivi otsimine. Kui massiiv on suur ja lineaarne otsing on liiga aeglane ning binaarne otsing nõuaks eelnevat sorteerimist, võib Jump Search olla kiire alternatiiv.
+Elementidega ebavõrdselt jaotunud massiiv. Kui massiivis on elemendid ebavõrdselt jaotunud ja nende vahe on suur, võib Jump Search olla efektiivsem kui binaarne otsing.
+Andmete struktuuri piirangud. Kui andmestruktuur ei võimalda otsest indeksi juurdepääsu, kuid võimaldab kiiret hüppamist, võib Jump Search olla kasulik.
+Sobib hästi olukordadesse, kus massiivi suurus on teadmata, kuna hüpplaiuse põhjal saab määrata optimaalsema otsingu strateegia.
+Eeliseks võib osutuda olukord, kus andmestik on osaliselt järjestatud, sest jump search ei eelda täpset sorteeritust nagu binaarne otsing.
 
-Oluline on märkida, et Jump Search'i efektiivsus sõltub oluliselt andmestruktuuri ja otsitava elemendi jaotusest. On oluline mõõta ja võrrelda erinevate otsingualgoritmide tegelikku toimivust vastavalt konkreetsele kasutusstsenaariumile.
+Jump Search'i efektiivsus sõltub oluliselt andmestruktuuri ja otsitava elemendi jaotusest. 
+
+
+
 
