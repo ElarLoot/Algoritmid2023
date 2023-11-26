@@ -4,7 +4,7 @@ Kolmikotsing ja Kahendotsing (Ternary Search vs Binary Search)
 Ternary Search on otsingualgoritm, mis töötab sarnaselt Binary otsingule, kuid otsib andmestruktuuris kolmandiku (1/3) kaupa. Algoritm toimib järjestikuste kolmandike vaatluse kaudu, 
 kitsendades iga sammu järel otsitavat vahemikku.
 
-Näide
+Näide.
 
 function ternary_search(left, right, key):
     while left <= right:
@@ -37,7 +37,25 @@ Ternary Search'i ja Binary Search'i aegkomplekssuse võrdlus
 Ternary Search ja Binary Search mõlemad omavad sarnast aegkomplekssust O(log n), kus n on otsitava struktuuri suurus. 
 Kuid Ternary Search'il võib olla mõnevõrra kõrgem peidetud konstant, mis muudab selle praktikas vähem efektiivseks võrreldes Binary otsinguga.
 
-Binary Search vs Ternary Search efektiivsus
+1. Teoreetiline võrdlus.
+
+Mõlemad Ternary Search ja Binary Search on logaritmilise aegkomplekssusega algoritmid.
+Binary Search: O(log n) - iga sammu puhul vähendatakse otsitavat vahemikku poole võrra.
+Ternary Search: O(log3 n) - iga sammu puhul vähendatakse otsitavat vahemikku kolmandiku võrra.
+Teoreetiliselt on Ternary Search aeglasem kui Binary Search, sest iga sammuga vähendatakse otsitavat vahemikku vähem. See tähendab, et Ternary Search'il on potentsiaalselt rohkem samme kui Binary Search'il.
+
+2. Mõõdetud tulemused.
+
+Praktilise efektiivsuse hindamiseks on oluline kaaluda peidetud konstante ja mõõdetud tulemusi. Reaalses maailmas võivad need erineda teoreetilisest analüüsist.
+Mõõdetud tulemuste põhjal võib leida, et mõnes olukorras võib Ternary Search olla kiirem kui oodatud, näiteks kui otsitav element on lähemal algoritmi algusele või kui arvutuste hulk iga sammu jaoks on madal.
+Suuremate andmehulkade korral võib Binary Search siiski sageli olla kiirem, kuna iga samm vähendab otsitavat vahemikku poole võrra, mis tähendab vähem võrdlusi.
+
+3. Praktiline kasutus ja olukorrad.
+
+Binary Search on laialdaselt kasutatav ja tõhus enamikus olukordades, eriti kui andmestruktuur on juba sorteeritud. Ternary Search'il on piiratud praktiline kasutusala ja võib osutuda kasulikuks ainult teatud eritingimustel, näiteks spetsiifilise piirkonna otsimisel suurest andmestruktuurist.
+
+
+Binary Searchi efektiivsus võrreldes Ternary Searchiga
 
 Binary Search on üldiselt tõhusam kui Ternary Search enamikus olukordades. Seda seetõttu, et Ternary Search teeb iga sammuga kolmandiku vaatlust, 
 mis võib viia rohkemate sammude tegemiseni kui Binary Search, eriti suurte andmehulkade korral. Binäärotsing teeb iga sammuga poole vähem võrdlusi, mis võib viia kiirema lõpptulemuseni.
