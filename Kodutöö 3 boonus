@@ -1,27 +1,43 @@
 Fibonacci Search
 
-Fibonacci Search on otsingualgoritm, mis kasutab Fibonacci jada (0, 1, 1, 2, 3, 5, 8, 13, ...) arvusid, et defineerida otsinguintervalli. 
-Algoritm toimib järgmiselt
 
-1. Kui otsinguala algus ja lõpp on määratud, kasutatakse Fibonacci jada elemente, et määratleda kaks uut indeksit: i ja j.
-2. Uus indeks i on eelmine Fibonacci jada element enne j ning uus indeks j on eelmine Fibonacci jada element enne i.
-3. Võrreldakse otsitavat elementi massiivi elemendiga indeksil i.
-4. Sõltuvalt võrdluse tulemusest vähendatakse otsinguintervalli vastavalt Fibonacci jada elementidele.
-
-Kuidas kasutada suuremahuliste andmete sorteeritud massiivides:
-
-Fibonacci Search'i saab kasutada suuremahuliste andmete sorteeritud massiivides, kus on oluline leida element võimalikult efektiivselt. Algoritm võib olla eelistatud eriti siis, 
-kui massiivi suurus on suur ja kui muid otsingualgoritme ei ole otstarbekas kasutada.
+Fibonacci Search on otsingualgoritm, mis kasutab Fibonacci jada elemente otsinguruumi vähendamiseks. Algoritm eeldab, 
+et andmekogu on juba sorteeritud. Põhiprintsiip on jagada andmekogu kaheks osaks, kus osade suurused vastavad Fibonacci jada kahele järjestikusele elemendile. 
+Seejärel otsustatakse, millisesse osasse jätkata otsingut, sõltuvalt võrreldava elemendi suurusest.
 
 
-Stsenaarium, kus Fibonacci Search on efektiivsem:
+Fibonacci Search suuremahuliste andmete sorteeritud massiivis.
 
-Kui massiivis on suured, kuid lünklikud väärtuste kogumid.
+Fibonacci Search'i efektiivsus suuremahuliste sorteeritud massiivide puhul tuleneb selle võimest kiiresti vähendada otsinguruumi, eriti olukordades, kus otsitav element on lähemal massiivi algusele või lõpule.
 
-Miks on Fibonacci Search parem valik:
+Kiire otsinguruumi vähendamine.
 
-Kui massiivis on lünklikud alad, kus asuvad otsitavad elemendid, võib Fibonacci Search olla efektiivsem kui näiteks Binary Search või Ternary Search. See tuleneb sellest, 
-et Fibonacci Search suudab kohandada otsinguintervalli vastavalt Fibonacci jada elementidele, võimaldades hüpatud otsinguid, mis võivad lünkades kiiremini soovitud tulemuseni jõuda.
+Fibonacci Search kasutab Fibonacci jada elemente massiivi jagamiseks, vähendades otsinguruumi kiiremini kui näiteks Binary Search. 
+Selle tulemusena suudab see kiiresti läheneda otsitavale elemendile, eriti kui see on massiivi alguses või lõpus.
 
-Fibonacci Search võib vähendada vajalikke võrdlusi võrreldes Binary Search'iga, eriti kui otsitav element asub kaugemal ja lünkade tõttu on vaja teha suuremaid hüppeid. 
-Ternary Search võib olla piiratud efektiivsusega, kuna see teeb ainult kaks võrdlust iga iteratsiooni korral, samas kui Fibonacci Search võib teha rohkem hüppeid, mille tulemuseks on kiirem otsing.
+Jälgib otsingu vahemikku.
+
+Algoritm hoiab jälgimas kahte indeksit, mille kaudu määratakse otsingu vahemik. See võimaldab Fibonacci Search'il fookustada otsingut konkreetsesse osasse massiivist, 
+mis muudab selle efektiivseks olukordades, kus otsitav element on ebatõenäoline massiivi keskosas.
+
+
+Stsenaarium, kus Fibonacci Search on efektiivsem.
+
+Olukord, kus suuremahulises sorteeritud massiivis on otsitav element lähemal massiivi algusele või lõpule kui keskele. 
+Näiteks võib see olla ajasorteeritud logifail, kus uued kirjed lisatakse massiivi algusesse ja vanad kustutatakse massiivi lõpust.
+
+Kui soovime leida hiljutist logisõnumit, siis selleks kasutades näiteks Binary Search, peame alati jagama massiivi pooleks, hoolimata sellest, 
+kus otsitav element asub. Kuna uued sõnumid on massiivi alguses, võib selle tulemusena olla palju tarbetuid võrdlusi.
+
+
+MIks on Fibonacci Search just selles stsenaariumis parem valik?
+
+Fibonacci Search võimaldab suurema paindlikkuse jaoks kiiret otsinguruumi vähendamist, sest see jagab massiivi mitte ainult kaheks, vaid vastavalt Fibonacci jadale. 
+Seega, kui otsitav element on tõenäoliselt massiivi alguses või lõpus, võib Fibonacci Search teha vähem võrdlusi kui Binary Search, kuna see suudab hüpata kiiremini sinna, kus otsitav element tõenäoliselt asub.
+
+Kuid Fibonacci Search ei pruugi olla alati efektiivsem kui Binary Search, kuid teatud olukordades, kus otsitav element on tõenäolisemalt lähemal massiivi servale, võib see anda paremaid tulemusi.
+
+
+
+
+
