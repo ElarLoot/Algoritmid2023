@@ -1,1 +1,34 @@
 Ülesanne 4
+
+
+### Ülevaade avatud aadressimise meetodist kokkupõrgete lahendamisel räsimises:
+
+Avatud aadressimine on meetod räsimistabelis kokkupõrgete lahendamiseks, kus kui esialgne räsiväärtus on juba hõivatud, leitakse uus vaba koht selle leidmiseks. Selle meetodi puhul salvestatakse kollisioonide korral uus element järgmises vabas lahtris vastavalt mingile kindlale algoritmile.
+
+### Võrdlus kolme avatud aadressimise tehnikaga:
+
+1. **Lineaarne otsing (Linear Probing):**
+   - **Algoritm:** Kui kokkupõrge toimub, otsitakse järgmist vaba kohta lineaarselt.
+   - **Eelis:** Lihtne ja kiire.
+   - **Puudus:** Klastri teke - kui tabel on hõivatud, siis ka järgmine koht on tõenäoliselt hõivatud.
+   - **Kasutamine:** Sobib hästi olukordades, kus esineb palju järjestikuseid kokkupõrkeid.
+
+2. **Ruuduline otsing (Quadratic Probing):**
+   - **Algoritm:** Kui kokkupõrge toimub, otsitakse järgmist vaba kohta kvadraatfunktsiooni abil.
+   - **Eelis:** Vähendab klastri mõju võrreldes lineaarse otsinguga.
+   - **Puudus:** Võib siiski tekitada klastreid teatud olukordades.
+   - **Kasutamine:** Sobib hästi, kui esineb mõõdukas arv kokkupõrkeid.
+
+3. **Topelträsimine (Double Hashing):**
+   - **Algoritm:** Kasutab kahte räsifunktsiooni, et leida järgmine vaba koht.
+   - **Eelis:** Vähendab klastri mõju veelgi, kui kasutada hästi valitud teist räsifunktsiooni.
+   - **Puudus:** Nõuab täiendavat arvutusvõimsust räsifunktsioonide jaoks.
+   - **Kasutamine:** Efektiivne, kui on oluline vältida klastreid.
+
+### Millistes olukordades iga tehnika oleks kõige efektiivsem:
+
+- **Lineaarne otsing:** Sobib hästi, kui kokkupõrkeid on vähe ja tabel ei ole liiga täis. Lihtsus muudab selle efektiivseks, kui mälukasutus pole probleem.
+
+- **Ruuduline otsing:** Sobib mõõduka arvu kokkupõrgete korral, kuid suudab vähendada klastri mõju. Sobib hästi olukordades, kus üksikud klastri elemendid pole määravad.
+
+- **Topelträsimine:** Efektiivne, kui soovitakse minimeerida klastri efekti ja on valmis investeerima täiendavasse arvutusvõimsusse teise räsifunktsiooni jaoks. Sobib hästi suure tihedusega tabelite puhul.
