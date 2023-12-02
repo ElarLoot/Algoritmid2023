@@ -1,1 +1,62 @@
 Ülesanne 5
+
+
+1. Topelt Räsimise Algoritmi Implementatsioon ja Eelis
+Topelt räsimine on räsimise tehnikas, kus kasutatakse kahte erinevat räsifunktsiooni, et lahendada võimalikke kokkulangevusi. 
+Kui esimene räsiväärtus annab kokkulangevuse, siis kasutatakse teist räsifunktsiooni teiseks prooviks.
+
+class DoubleHashingHashTable:
+    def __init__(self, size):
+        self.size = size
+        self.table = [None] * size
+
+    def hash_function1(self, key):
+        # Esimene räsifunktsioon
+        return key % self.size
+
+    def hash_function2(self, key):
+        # Teine räsifunktsioon
+        return 1 + (key % (self.size - 1))
+
+    def insert(self, key):
+        index = self.hash_function1(key)
+
+        if self.table[index] is None:
+            self.table[index] = key
+        else:
+            # Kui esimene räsifunktsioon andis kokkulangevuse, kasuta teist räsifunktsiooni
+            i = 1
+            while True:
+                newIndex = (index + i * self.hash_function2(key)) % self.size
+                if self.table[newIndex] is None:
+                    self.table[newIndex] = key
+                    break
+                i += 1
+
+    def display(self):
+        print("Hash Table:")
+        for i in range(self.size):
+            print(f"Index {i}: {self.table[i]}")
+
+# Näide kasutamisest
+hash_table = DoubleHashingHashTable(10)
+keys = [12, 34, 22, 46, 75, 50, 53, 64]
+for key in keys:
+    hash_table.insert(key)
+
+hash_table.display()
+
+#####Topelt räsimise eelis seisneb selles, et see võimaldab lahendada kokkulangevusi mitmel viisil, suurendades seeläbi tabeli täitmise efektiivsust.
+
+2. Aja- ja Ruumikomplekssuse Analüüs
+Aja- ja ruumikomplekssus sõltub rakendusest, kuid topelt räsimise puhul on keskmine otsinguaeg ja sisestusaeg tavaliselt väga hea. Aja keerukus on tavaliselt O(1) juhul, kui kokkulangevusi esineb harva. Ruumikomplekssus on O(n), kus n on tabeli suurus.
+
+3. Efektiivne Stsenaarium Topelt Räsimisele
+Topelt räsimine on eriti efektiivne järgmistel stsenaariumitel:
+
+Suur andmete hulk: Kui on suur hulk andmeid ja tavaline räsimine põhjustab palju kokkulangevusi, võib topelt räsimine aidata vähendada kokkulangevuste arvu ja seeläbi parandada otsingutulemusi.
+Mitmekordsed kokkulangevused: Kui on oodata, et paljud võtmed annavad sama räsiväärtuse, on topelt räsimine kasulik, sest see võimaldab leida alternatiivseid indekseid, kui esimene räsifunktsioon põhjustab kokkulangevuse.
+Väikese tabeli suurus: Erinevalt avatud aadressimisest ei pea topelt räsimine nõudma suurt lisamälu, seega võib see olla efektiivne väiksemate mälumahtude korral.
+Loodetavasti aitab see selgitus ja implementatsioon topelt räsimise kohta!
+
+
