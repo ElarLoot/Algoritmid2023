@@ -1,1 +1,73 @@
 Ülesanne 3
+
+
+class Node:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.next = None
+
+class SeparateChainingHashTable:
+    def __init__(self, size):
+        self.size = size
+        self.table = [None] * size
+
+    def hash_function(self, key):
+        return hash(key) % self.size
+
+    def insert(self, key, value):
+        index = self.hash_function(key)
+        if self.table[index] is None:
+            self.table[index] = Node(key, value)
+        else:
+            current = self.table[index]
+            while current.next:
+                current = current.next
+            current.next = Node(key, value)
+
+    def search(self, key):
+        index = self.hash_function(key)
+        current = self.table[index]
+        while current:
+            if current.key == key:
+                return current.value
+            current = current.next
+        return None
+
+    def delete(self, key):
+        index = self.hash_function(key)
+        current = self.table[index]
+        prev = None
+        while current:
+            if current.key == key:
+                if prev:
+                    prev.next = current.next
+                else:
+                    self.table[index] = current.next
+                return
+            prev = current
+            current = current.next
+
+# Näide kasutamisest:
+hash_table = SeparateChainingHashTable(10)
+hash_table.insert("a", 1)
+hash_table.insert("b", 2)
+hash_table.insert("c", 3)
+
+print(hash_table.search("b"))  # Väljund: 2
+hash_table.delete("b")
+print(hash_table.search("b"))  # Väljund: None
+
+
+2. Efektiivsuse võrdlus:
+Ajaliselt ja ruumiliselt efektiivsuse võrdlemiseks oleks vaja konkreetset implementatsiooni open addressing meetodiga ja andmeid, mida analüüsida. Üldiselt võib öelda, et separate chaining pakub hea tulemuse, kui kokkupõrked on harvad, kuna see võimaldab erinevatel võtmetel jagada samu hoidlaid, mis vähendab kokkupõrgete arvu.
+
+3. Separate Chaining Plusse ja Miinuseid räsitabelites:
+Plussid:
+Lihtne Implementeerida: Separate chaining on lihtne implementeerida ja mõista.
+Efektiivne Harvade Kokkupõrgete Korral: Kui kokkupõrked on harvad, on separate chaining efektiivne ja võimaldab hea jaotumise.
+Miinused:
+Mälu Kasutamine: Erinevalt avatud aadressimise meetoditest võib separate chaining kasutada rohkem mälu, kuna iga hoidla hoiab lisaks võtmele ja väärtusele ka viidet linked-listi jaoks.
+Halb Tulemus Suurte Kokkupõrgete Korral: Kui kokkupõrked on sage nähtus, võib linked-listide pikkus muutuda liiga suureks, mis halvendab jõudlust. See võib viia aja- ja mälukasutuse suurenemiseni.
+Need punktid on üldised ja efektiivsus sõltub konkreetsest rakendusest ja andmestruktuurist.
+
