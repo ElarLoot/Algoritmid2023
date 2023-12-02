@@ -1,0 +1,27 @@
+Ülesanne 1: Räsimine
+
+1. Räsimise (Hashing) kontseptsioon
+Räsimine on andmete salvestamise meetod, mis kasutab räsifunktsiooni (hash function), et teisendada sisendandmed kindla pikkusega jada, mida nimetatakse räsiväärtuseks ehk räsiks. Põhiidee seisneb selles, et räsiväärtus on unikaalne iga erineva sisendväärtuse jaoks. Eesmärk on kiire ja tõhus ligipääs andmetele, kuna otsimiseks ei pea kogu andmebaasi läbi vaatama.
+
+2. Hea räsifunktsiooni omadused ja nende tähtsus
+- Unikaalsus**: Igale erinevale sisendile peaks vastama unikaalne räsiväärtus. See tagab andmete üheselt mõistetava esindatuse räsiruumis.
+  
+- Kiirus: Räsifunktsioon peaks olema kiire arvutama, et säilitada räsimise eelised andmete kiireks töötlemiseks.
+
+- **Väikese muudatuse tundlikkus**: Isegi väike muudatus sisendis peaks tekitama olulise muudatuse räsiväärtuses (avalikustamata osa põhimõte). See omadus on oluline andmete turvalisuse seisukohast.
+
+- **Ühtlane jaotus**: Räsiväärtused peaksid olema ühtlaselt jaotunud kogu räsiruumis, et vähendada kokkupõrke tõenäosust.
+
+3. Kokkupõrgete lahendamise tehnikad
+    Eraldi aheldamine (Separate Chaining)**:
+  - See meetod hõlmab räsimise tabeli loomist, kus igas tabelikohas hoitakse andmestruktuuri (näiteks nimekirja või puu) kokkupõrke korral tekkivate elementide jaoks. 
+  - Plussid: Lihtne rakendada, hea jõudluse korral kui kokkupõrkeid on vähe.
+  - Miinused: Võib tekkida nimekirja või puu ülekoormatus, kui kokkupõrkeid on palju.
+
+    Avatud aadressimine (Open Addressing)**:
+  - Selles tehnikas proovitakse leida uus koht kokkupõrke korral samas räsiruumis (tabelis).
+  - Lineaarne proovimine, kvadratuurproovimine ja topelthashimine on levinud avatud aadressimise strateegiad.
+  - Plussid: Lihtne ja tõhus, kui tabel on hõredalt täidetud.
+  - Miinused: Võib tekkida klasterdumist (pikki jada kokkupõrkeid), mõjuvus halveneb, kui tabel täitub.
+
+Mõlemad meetodid on kasulikud erinevates olukordades, ja valik sõltub rakendusest, andmete ja räsifunktsiooni omadustest.
