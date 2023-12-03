@@ -6,44 +6,42 @@ Avatud aadressimine on meetod räsimistabelis kokkupõrgete lahendamiseks, kus k
 
 2. Võrdlus kolme avatud aadressimise tehnikaga
 
-  1. Lineaarne otsing (Linear Probing)
-     - Kui kokkupõrge toimub, otsitakse järgmist vaba kohta lineaarselt.
-     - Eelis 
-       Lihtne ja kiire.
-     - Puudus 
-       Kui tabel on hõivatud, siis ka järgmine koht on tõenäoliselt hõivatud.
-     - Kasutamine 
-       Sobib hästi olukordades, kus esineb palju järjestikuseid kokkupõrkeid.
+  1. Lineaarne Otsing (Linear Probing)
+   - Selles tehnikas otsitakse järgmisi aadresse järjestikku.
+   - Lihtne implementeerida ja mäluefektiivne.
+   - Kuid kui räsimisel on palju kokkupõrkeid, võib tekkida klasterdamine, kus kõik kokkupõrked kipuvad kogunema samasse 
+     piirkonda, mis mõjutab otsingu efektiivsust.
 
-  2. Ruuduline otsing (Quadratic Probing)
-     - Algoritm 
-       Kui kokkupõrge toimub, otsitakse järgmist vaba kohta kvadraatfunktsiooni abil.
-     - Eelis 
-       Vähendab klastri mõju võrreldes lineaarse otsinguga.
-     - Puudus
-       Võib siiski tekitada klastreid teatud olukordades.
-     - Kasutamine
-       Sobib hästi, kui esineb mõõdukas arv kokkupõrkeid.
+2. Ruuduline Otsing (Quadratic Probing)
+   - Järgmiste aadresside otsimisel kasutatakse ruudufunktsiooni (kvadratuuri).
+   - Vähendab klasterdamise mõju võrreldes lineaarse otsinguga.
+   - Kuid võib endiselt tekitada sekundaarseid kokkupõrkeid.
 
-  3. Topelträsimine (Double Hashing)
-     - Algoritm 
-       Kasutab kahte räsifunktsiooni, et leida järgmine vaba koht.
-     - Eelis
-       Vähendab klastri mõju veelgi, kui kasutada hästi valitud teist räsifunktsiooni.
-     - Puudus 
-       Nõuab täiendavat arvutusvõimsust räsifunktsioonide jaoks.
-     - Kasutamine 
-       Efektiivne, kui on oluline vältida klastreid.
+3. Topelträsimine (Double Hashing)
+   - Kasutab teist hajufunktsiooni, et määrata, kui suur on samm järgmise vaba aadressini.
+   - Võib pakkuda paremat hajutamist kui lineaarne või ruuduline otsing.
+   - Suurem arvutuskoormus võrreldes teiste meetoditega.
+
+
 
 3. Olukorrad iga tehnika oleks kõige efektiivsem:
 
- - Lineaarne otsing 
-   Sobib hästi, kui kokkupõrkeid on vähe ja tabel ei ole liiga täis. Lihtsus muudab selle efektiivseks, kui mälukasutus pole probleem.
+ 1. Lineaarne Otsing
+   - Sobib hästi, kui räsimisel on vähe kokkupõrkeid.
+   - Lihtne implementeerida ja vähem mäluressurssenõudev.
+   - Efektiivne, kui on vähe muudatusi räsiväärtuste vahel.
 
- - Ruuduline otsing 
-   Sobib mõõduka arvu kokkupõrgete korral, kuid suudab vähendada klastri mõju. Sobib hästi olukordades, kus üksikud klastri elemendid 
-   pole määravad.
+2. Ruuduline Otsing
+   - Sobib siis, kui esineb mõõdukas hulk kokkupõrkeid.
+   - Võrreldes lineaarse otsinguga vähendab klasterdamist, kuid võib siiski tekitada sekundaarseid kokkupõrkeid.
+   - Sobib hästi keskmise suurusega andmestruktuuridele.
 
- - Topelträsimine 
-   Efektiivne, kui soovitakse minimeerida klastri efekti ja on valmis investeerima täiendavasse arvutusvõimsusse teise räsifunktsiooni 
-   jaoks. Sobib hästi suure tihedusega tabelite puhul.
+3. Topelträsimine
+   - Efektiivne suure hulga kokkupõrgete korral.
+   - Võib olla kasulik, kui on oluline vältida klasterdamist.
+   - Sobib hästi suurtele andmemahtudele, kus kokkupõrked on tõenäolisemad.
+
+
+
+
+
