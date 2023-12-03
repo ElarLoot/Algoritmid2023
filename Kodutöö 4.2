@@ -4,7 +4,7 @@
    Indeksi kaardistamine (Index Mapping) on algoritm, mis kasutab mingi funktsiooni, näiteks räsimisfunktsiooni, elementide 
    vastendamiseks indeksitega. 
    
-Näide selle rakendamisest Pythonis.
+- Näide selle rakendamisest Pythonis.
 
 class IndexMapping:
     def __init__(self):
@@ -34,23 +34,30 @@ print(index_mapping.get_element("Johann"))  # Väljund: 25
 print(index_mapping.get_element("Uku"))   # Väljund: None
 
 
-Aja- ja ruumikomplekssuse analüüs
+2. Aja- ja ruumikomplekssuse analüüs
 
-Aeg:
+- Aeg
+  Elementide lisamine (add_element meetod) toimub triviaalse räsimise kaudu, mis on tavaliselt kiire O(1).
+  Elementide otsimine (get_element meetod) võib kuluda O(n) aega, kus n on sama räsimisindeksiga elementide arv. Kui aga 
+  räsimisfunktsioon on hästi valitud, siis see toimub enamasti O(1).
+  
+- Ruum
+  Ruumikomplekssus sõltub kasutatud räsimisfunktsioonist ja kokkuleppest, kui palju elemente võib olla sama indeksiga. Antud näites 
+  kasutatakse fikseeritud pikkusega massiivi (1000 elementi), seega ruumikomplekssus on O(1),
+  kui me ei arvesta elementide arvu kokkulepet indeksi kohta.
 
-Elementide lisamine (add_element meetod) toimub triviaalse räsimise kaudu, mis on tavaliselt kiire O(1).
-Elementide otsimine (get_element meetod) võib kuluda O(n) aega, kus n on sama räsimisindeksiga elementide arv. Kui aga räsimisfunktsioon on hästi valitud, siis see toimub enamasti O(1).
-Ruum:
+3. Indeksi kaardistamise rakendamine reaalses maailmas
 
-Ruumikomplekssus sõltub kasutatud räsimisfunktsioonist ja kokkuleppest, kui palju elemente võib olla sama indeksiga. Antud näites kasutatakse fikseeritud pikkusega massiivi (1000 elementi), seega ruumikomplekssus on O(1),
-kui me ei arvesta elementide arvu kokkulepet indeksi kohta.
+ - Andmebaasiindeksid 
+   Andmebaasisüsteemid kasutavad sageli indekseid, et kiirendada andmete otsimist. Indeksi kaardistamine võib olla 
+   sarnane, kus andmebaasisüsteem loob indeksid võtmete põhjal, et otsingud oleksid tõhusamad.
 
-Indeksi kaardistamise rakendamine reaalses maailmas:
+ - Räsimistabelid 
+   Võib kasutada räsimistabeleid, et kiiresti leida elemente, näiteks DNS-süsteemis, kus domeeninimi on räsimise teel seotud IP- 
+   aadressiga.
 
-Andmebaasiindeksid: Andmebaasisüsteemid kasutavad sageli indekseid, et kiirendada andmete otsimist. Indeksi kaardistamine võib olla sarnane, kus andmebaasisüsteem loob indeksid võtmete põhjal, et otsingud oleksid tõhusamad.
+ - Vahemälu (Cache) haldamine 
+   Indeksi kaardistamist saab kasutada ka vahemälu haldamisel, kus räsimine aitab kiiresti otsustada, milliseid andmeid vahemälus hoida 
+   ja milliseid mitte.
 
-Räsimistabelid: Võib kasutada räsimistabeleid, et kiiresti leida elemente, näiteks DNS-süsteemis, kus domeeninimi on räsimise teel seotud IP-aadressiga.
-
-Vahemälu (Cache) haldamine: Indeksi kaardistamist saab kasutada ka vahemälu haldamisel, kus räsimine aitab kiiresti otsustada, milliseid andmeid vahemälus hoida ja milliseid mitte.
-
-Indeksi kaardistamine on laialdaselt kasutatav tehnika, kus saab tõhusalt leida ja salvestada andmeid, kui on teada nende võti.
+  Indeksi kaardistamine on laialdaselt kasutatav tehnika, kus saab tõhusalt leida ja salvestada andmeid, kui on teada nende võti.
