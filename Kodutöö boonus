@@ -12,18 +12,18 @@ Muidugi, siin on vastused teie küsimustele:
 
  Koormustegur näitab, kui palju räsitabel on täidetud või "koormatud". Kui koormustegur on suur, tähendab see, et räsitabel on lähemal täitumisele, mis omakorda suurendab konfliktide ja aja komplekssuse riski. Ideaalne olukord on, kui koormustegur on madal ja tabel on piisavalt suur, et vältida liigset konflikte.
 
-2. **Rehashingu protsess ja selle efektiivsus:**
+2. Rehashingu protsess ja selle efektiivsus
 
    Rehashing on protsess, kus räsitabelit suurendatakse või vähendatakse ning olemasolevad elemendid jaotatakse ümber uue suurusega tabelis. Üks lihtne rehashingu meetod on lihtsalt kahekordistada tabeli suurus, kui koormustegur ületab teatud piiri.
 
    Näiteks, kui koormustegur ületab 0.7, võite otsustada kahekordistada tabeli suuruse ja seejärel liigutada iga olemasoleva elemendi uude tabelisse. See protsess vähendab koormustegurit, hoides ära liigset täitmist ja konflikte.
 
-3. **Rehashingu mõju räsitabeli jõudlusele:**
+3. Rehashingu mõju räsitabeli jõudlusele
 
    Rehashingu eelised ja puudused:
 
-   - *Eelised:*
-     - **Vähendab konflikte:** Suurendades tabeli suurust või kasutades muid rehashingu meetodeid, vähendab see olemasolevate elementide vahelisi konflikte.
+   - Eelised
+     - Vähendab konflikte Suurendades tabeli suurust või kasutades muid rehashingu meetodeid, vähendab see olemasolevate elementide vahelisi konflikte.
      - **Säilitab efektiivsuse:** Hoolikalt valitud rehashingu strateegia võib aidata säilitada räsitabeli efektiivsust pikema aja jooksul.
 
    - *Puudused:*
