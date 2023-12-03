@@ -2,6 +2,7 @@
 
 
 1. Topelt Räsimise Algoritmi Implementatsioon ja Eelis
+
 Topelt räsimine on räsimise tehnikas, kus kasutatakse kahte erinevat räsifunktsiooni, et lahendada võimalikke kokkulangevusi. 
 Kui esimene räsiväärtus annab kokkulangevuse, siis kasutatakse teist räsifunktsiooni teiseks prooviks.
 
@@ -48,15 +49,24 @@ hash_table.display()
 
 Topelt räsimise eelis seisneb selles, et see võimaldab lahendada kokkulangevusi mitmel viisil, suurendades seeläbi tabeli täitmise efektiivsust.
 
-2. Aja- ja Ruumikomplekssuse Analüüs
+2. Aja- ja ruumikomplekssuse analüüs
+
 Aja- ja ruumikomplekssus sõltub rakendusest, kuid topelt räsimise puhul on keskmine otsinguaeg ja sisestusaeg tavaliselt väga hea. Aja keerukus on tavaliselt O(1) juhul, kui kokkulangevusi esineb harva. Ruumikomplekssus on O(n), kus n on tabeli suurus.
 
-3. Efektiivne Stsenaarium Topelt Räsimisele
-Topelt räsimine on eriti efektiivne järgmistel stsenaariumitel:
+3. Efektiivne stsenaarium topelt räsimisele
 
-Suur andmete hulk: Kui on suur hulk andmeid ja tavaline räsimine põhjustab palju kokkulangevusi, võib topelt räsimine aidata vähendada kokkulangevuste arvu ja seeläbi parandada otsingutulemusi.
-Mitmekordsed kokkulangevused: Kui on oodata, et paljud võtmed annavad sama räsiväärtuse, on topelt räsimine kasulik, sest see võimaldab leida alternatiivseid indekseid, kui esimene räsifunktsioon põhjustab kokkulangevuse.
-Väikese tabeli suurus: Erinevalt avatud aadressimisest ei pea topelt räsimine nõudma suurt lisamälu, seega võib see olla efektiivne väiksemate mälumahtude korral.
-Loodetavasti aitab see selgitus ja implementatsioon topelt räsimise kohta!
+- Topelt räsimine on eriti efektiivne järgmistel stsenaariumitel:
+  -Suur andmete hulk 
+   Kui on suur hulk andmeid ja tavaline räsimine põhjustab palju kokkulangevusi, võib topelt räsimine aidata vähendada kokkulangevuste 
+   arvu ja see läbi parandada otsingutulemusi.
+
+- Mitmekordsed kokkulangevused
+  Kui on oodata, et paljud võtmed annavad sama räsiväärtuse, on topelt räsimine kasulik, sest see võimaldab leida alternatiivseid 
+  indekseid, kui esimene räsifunktsioon põhjustab kokkulangevuse.
+  
+- Väikese tabeli suurus 
+  Erinevalt avatud aadressimisest ei pea topelt räsimine nõudma suurt lisamälu, seega võib see olla efektiivne väiksemate mälumahtude 
+  korral.
+
 
 
