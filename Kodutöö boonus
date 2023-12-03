@@ -1,22 +1,22 @@
 Boonusülesanne: Koormustegur ja Rehashing (Double hashing vs Rehashing)
 
 
-
-Muidugi, siin on vastused teie küsimustele:
-
-1. **Räsitabeli koormustegur ja selle olulisus:**
+1. Räsitabeli koormustegur ja selle olulisus
    
-   Räsitabeli koormustegur on suhe aktiivsete elementide arvu ja tabeli suuruse vahel. See arvutatakse järgmiselt:
+   Räsitabeli koormustegur on suhe aktiivsete elementide arvu ja tabeli suuruse vahel. 
 
-  Koormustegur= aktiivsete elementide arv/tabeli suurus
+  Koormustegur = aktiivsete elementide arv/tabeli suurus
 
- Koormustegur näitab, kui palju räsitabel on täidetud või "koormatud". Kui koormustegur on suur, tähendab see, et räsitabel on lähemal täitumisele, mis omakorda suurendab konfliktide ja aja komplekssuse riski. Ideaalne olukord on, kui koormustegur on madal ja tabel on piisavalt suur, et vältida liigset konflikte.
+ Koormustegur näitab, kui palju räsitabel on täidetud või "koormatud". Kui koormustegur on suur, tähendab see, et räsitabel on lähemal täitumisele, mis omakorda suurendab konfliktide ja aja komplekssuse riski. 
+ Ideaalne olukord on, kui koormustegur on madal ja tabel on piisavalt suur, et vältida liigset konflikte.
 
 2. Rehashingu protsess ja selle efektiivsus
 
-   Rehashing on protsess, kus räsitabelit suurendatakse või vähendatakse ning olemasolevad elemendid jaotatakse ümber uue suurusega tabelis. Üks lihtne rehashingu meetod on lihtsalt kahekordistada tabeli suurus, kui koormustegur ületab teatud piiri.
+   Rehashing on protsess, kus räsitabelit suurendatakse või vähendatakse ning olemasolevad elemendid jaotatakse ümber uue suurusega tabelis. 
+   Üks lihtne rehashingu meetod on lihtsalt kahekordistada tabeli suurus, kui koormustegur ületab teatud piiri.
 
-   Näiteks, kui koormustegur ületab 0.7, võite otsustada kahekordistada tabeli suuruse ja seejärel liigutada iga olemasoleva elemendi uude tabelisse. See protsess vähendab koormustegurit, hoides ära liigset täitmist ja konflikte.
+   Näiteks, kui koormustegur ületab 0.7, võime kahekordistada tabeli suurust ja seejärel liigutada iga olemasoleva elemendi uude tabelisse. 
+   See protsess vähendab koormustegurit, hoides ära liigset täitmist ja konflikte.
 
 3. Rehashingu mõju räsitabeli jõudlusele
 
@@ -24,30 +24,20 @@ Muidugi, siin on vastused teie küsimustele:
 
    - Eelised
      - Vähendab konflikte Suurendades tabeli suurust või kasutades muid rehashingu meetodeid, vähendab see olemasolevate elementide vahelisi konflikte.
-     - **Säilitab efektiivsuse:** Hoolikalt valitud rehashingu strateegia võib aidata säilitada räsitabeli efektiivsust pikema aja jooksul.
+     - Säilitab efektiivsuse: Hoolikalt valitud rehashingu strateegia võib aidata säilitada räsitabeli efektiivsust pikema aja jooksul.
 
-   - *Puudused:*
-     - **Aeg- ja ressursinõudlik:** Rehashing võib olla kulukas operatsioon, eriti suurte tabelite korral, kus palju elemente tuleb ümber paigutada.
-     - **Mõjutab ajalist jõudlust:** Rehashingu ajal on räsitabel ajutiselt "lukus", mistõttu võivad tekkida ajutised jõudlusküsimused, eriti kiiresti muutuvas keskkonnas.
+   - Puudused
+     - Aeg- ja ressursinõudlik
+       Rehashing võib olla kulukas operatsioon, eriti suurte tabelite korral, kus palju elemente tuleb ümber paigutada.
+     - Mõjutab ajalist jõudlust
+       Rehashingu ajal on räsitabel ajutiselt "lukus", mistõttu võivad tekkida ajutised jõudlusküsimused, eriti kiiresti muutuvas keskkonnas.
 
    Kokkuvõttes on rehashing kasulik strateegia, kui seda rakendatakse õigesti, et säilitada räsitabeli efektiivsus ja ennetada liigset koormust.
-__________________________________
 
 
-1. **Räsitabeli koormustegur ja selle olulisus:**
-   Räsitabeli koormustegur on suhe, mis näitab, kui palju räsitabeli kohad on hõivatud võrreldes koguarvuga kõigist võimalikest kohtadest. See arvutatakse järgmise valemiga:
 
-   \[ \text{Koormustegur} = \frac{\text{Hõivatud kohad räsitabelis}}{\text{Kõigi võimalike kohtade arv räsitabelis}} \]
+  Lihtne Rehashing Pythonis
 
-   Koormustegurit väljendatakse tavaliselt protsentides või murdosa kujul. Kui koormustegur on liiga suur, võib see põhjustada räsitabeli jõudluse halvenemist, kuna kollisioonide tõenäosus suureneb.
-
-2. **Rehashingu protsess ja selle eesmärk:**
-   Rehashing on meetod räsitabeli mahu suurendamiseks või vähendamiseks, et säilitada madal koormustegur ja tagada tõhus toimimine. Kui räsitabeli koormustegur ületab kindla lävendi, 
-   käivitatakse rehashing. Kaks levinumat rehashingu meetodit on Double Hashing ja Rehashing.
-
-   Näide lihtsast Rehashingu protsessist Pythonis:
-
-   ```python
    def rehash(old_table):
        new_size = 2 * len(old_table)  # Uus suurus võib olla näiteks kaks korda suurem
        new_table = [None] * new_size
@@ -60,13 +50,7 @@ __________________________________
                new_table[hash_value] = item
 
        return new_table
-   ```
+   
 
-   See funktsioon loob uue räsitabeli, kasutades uut suurust ja liigutab olemasolevad elemendid uude tabelisse, kasutades uut räsifunktsiooni ja käsitleb kollisioone vajadusel.
+   Funktsioon loob uue räsitabeli, kasutades uut suurust ja liigutab olemasolevad elemendid uude tabelisse, kasutades uut räsifunktsiooni ja käsitleb kollisioone vajadusel.
 
-3. **Rehashingu mõju räsitabeli jõudlusele:**
-   Rehashing võib parandada räsitabeli jõudlust, kui koormustegur hakkab kasvama. Kui koormustegur on liiga suur, suureneb kollisioonide arv, mis vähendab otsingu- ja lisamistoimingute kiirust. 
-Rehashing vähendab koormustegurit, suurendades räsitabeli suurust, mis aitab vältida liigset kollisioonide teket.
-
-   Siiski tuleb märkida, et rehashing on ressursimahukas operatsioon, eriti suurte andmemahtude korral. Seetõttu peaks rehashingu käivitamine olema tasakaalus sooviga säilitada tõhus räsitabeli jõudlus 
-   ja ressursside optimaalne kasutamine.
