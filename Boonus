@@ -1,0 +1,23 @@
+P vs NP probleem on üks olulisemaid ja keerulisemaid küsimusi arvutiteaduses ning teoreetilises arvutusteaduses. See küsimus on seotud algoritmide efektiivsusega ja nende ajakuluga probleemide lahendamisel. Probleem pärineb arvutiteoreetilisest valdkonnast ja on sõnastatud järgmiselt:
+
+- P-probleemid: Need on probleemid, mille lahendamine on leitav polünomiaalse ajakuluga. See tähendab, et algoritmide tööaeg suureneb polünomiaalselt probleemi suurusega.
+
+- NP-probleemid: Need on probleemid, mille lahendus on verifitseeritav polünomiaalse ajakuluga, kuid ise leidmine ei pruugi olla polünomiaalne.
+
+P vs NP probleem seisneb selles, kas kõik NP-probleemid on ka P-probleemid, st kas igale probleemile, mille lahenduse õigsust saab kiiresti kontrollida, saab ka kiiresti leida lahenduse. Sellele küsimusele vastuse leidmine on seni jäänud avatuks ning see on NP-terav.
+
+Miks on P vs NP probleemi lahendamine oluline:
+
+1. Algoritmide efektiivsus: Kui suudaksime tõestada, et P = NP, tähendaks see, et kõik probleemid, mille lahendus on kiiresti kontrollitav, oleksid ka kiiresti lahendatavad. See muudaks paljud praktilised rakendused, mis hetkel on aeganõudvad, oluliselt efektiivsemaks.
+
+2. Turvalisus ja krüptograafia: Kui P = NP, siis kõik NP-probleemid, sealhulgas need, mis on seotud krüptograafiaga, oleksid lahendatavad efektiivselt. See paneks ohtu paljude krüptosüsteemide turvalisuse, kuna paljude kaitsemehhanismide aluseks on NP-raskuste probleemide lahendamise keerukus.
+
+Tagajärjed P vs NP probleemi lahendamisel:
+
+1. Algoritmide kiirendamine: Kui P = NP, siis avaneksid uued võimalused algoritmide kiirendamiseks, mis omakorda parandaks arvutuste tõhusust mitmetes valdkondades, sealhulgas andmetöötluses, optimeerimises ja masinõppes.
+
+2. Krüptograafia muutused: Kui P = NP, tähendaks see, et paljud krüptograafilised süsteemid ei ole enam turvalised, ja uute turvalahenduste väljatöötamine oleks hädavajalik.
+
+3. Mõistmise laiendamine: P vs NP probleemi lahendamine laiendaks meie arusaama arvutiteoreetilistest piirangutest ning avaks uusi uksi arvutiteaduses ja matemaatikas.
+
+Kokkuvõttes võib P vs NP probleemi lahendamine märkimisväärselt mõjutada arvutiteadust, algoritmide kujundamist, andmetöötlust, krüptograafiat ja paljusid teisi valdkondi, muutes nende valdkondade arengusuundi ja võimalusi.
