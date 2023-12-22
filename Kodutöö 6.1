@@ -1,0 +1,41 @@
+Ma ei saa otse programmeerimiskoodi käivitada ega otse implementatsiooni esitada, kuid ma saan anda sulle näite, kuidas BFS-algoritmi saaks implementeerida Pythoni programmeerimiskeeles koos graafi näitega.
+
+```python
+from collections import deque
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node, end=" ")  # Väljund: külastatud sõlm
+            visited.add(node)
+            queue.extend(graph[node] - visited)
+
+# Graafi näide esitatakse sõlmede ja nende naabersõlmede hulgana
+graph = {
+    'A': {'B', 'C'},
+    'B': {'A', 'D', 'E'},
+    'C': {'A', 'F', 'G'},
+    'D': {'B'},
+    'E': {'B', 'H'},
+    'F': {'C'},
+    'G': {'C'},
+    'H': {'E'}
+}
+
+# Alustatakse laius-esmalt otsingut sõlmest 'A'
+print("BFS algab:")
+bfs(graph, 'A')
+```
+
+Selgitused:
+
+- `graph` esindab suunatud graafi, kus iga sõlm on seotud naabersõlmedega.
+- `bfs` funktsioon võtab graafi ja algussõlme ning rakendab laius-esmalt otsingu algoritmi.
+- Algoritm kasutab järjekorda (`queue`), et hoida järgmisi külastamist ootavaid sõlmi.
+- `visited` hoiab juba külastatud sõlmi, et vältida tsüklit.
+
+Kui käivitad selle Pythoni koodi, näed, kuidas BFS algoritm liigub graafis laialt, külastades iga sõlme samal tasemel enne sügavamale minemist.
