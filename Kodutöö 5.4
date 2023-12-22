@@ -1,0 +1,26 @@
+ Punase-Musta Puu (Red-Black Tree) Teoreetiline Ülevaade
+
+1. Punase-Musta Puu
+Punase-Musta Puu on tasakaalustatud binaarne otsingupuu, kus igal sõlmel on atribuut, mis on kas must või punane. Struktuuri tasakaalu tagab viis reeglit, mida tuntakse kui punase-musta puu omadused.
+
+2. Peamised Omadused
+   - Värvireegel Iga sõlm on kas must või punane.
+   - Juureomadus Puu juur on alati must.
+   - Lehtede Omadus Kõik lehed (NULL-sõlmed) on mustad.
+   - Kahe Järgnevuse Omadus Kui sõlm on punane, siis selle lapse sõlmed on mõlemad mustad.
+   - Mustade Kõrguse Omadus Igas teeosas, mis algab mõnest sõlmest ja jõuab tema alamsõlmedeni (lehtedeni), on sama palju musti sõlmi.
+
+3. Võrdlus Punase-Musta Puu ja Binaarse Otsingupuu Tõhususe Osas
+   - Otsingu Toimivus Mõlemad andmestruktuurid pakuvad kiiret otsimist. Punase-musta puu täiendav tasakaalureegel tagab, et puu kõrgus on O(log n), kus n on sõlmede arv.
+   - Lisamise ja Eemaldamise Tõhusus Punase-musta puu struktuur lubab kiiret ja tõhusat lisamist ja eemaldamist, säilitades samal ajal tasakaalu. Binaarse otsingupuu puhul võivad halvad sisestamisjärjestused põhjustada viltuseid puid, kuid punase-musta puu korral on selline olukord välistatud.
+
+4. Tasakaalustamine ja Värvireeglid
+   - Värvireeglid Punase-musta puu värvireeglid tagavad, et puu jääb tasakaalus isegi pärast lisamist või eemaldamist.
+   - Tasakaalustamine Punase-musta puu tasakaalustamine on oluline, sest see hoiab ära viltuste põõsaste tekkimise, mis tagab O(log n) otsingu, lisamise ja eemaldamise operatsioonid.
+
+5. Kuidas Värvireeglid Aitavad Tõhususele
+   - Tasakaal Värvireeglid tagavad puu tasakaalu, mis omakorda tagab kiiremaid otsimis-, lisamis- ja eemaldamisoperatsioone.
+   - Pahede Sisestamiste Vältimine Punase-musta puu värvireeglid aitavad vältida halbu sisestamisjärjestusi, mis võivad põhjustada binaarse otsingupuu struktuuri degenereerumise.
+
+Kokkuvõte
+Punase-musta puu pakub efektiivset tasakaalustatud binaarset otsingupuud, kusjuures värvireeglid tagavad struktuuri tõhususe ja kiiruse. Võrreldes tavalise binaarse otsingupuuga on punase-musta puu eelisteks tasakaalustatus ja kõrguse piiramine, mis tagavad kiiremad operatsioonid.
