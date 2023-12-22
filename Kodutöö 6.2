@@ -1,0 +1,39 @@
+Sügavus-Esmalt Otsing (DFS) on üks graafi läbimise algoritme, mis kasutab sügavust esmalt lähenemisviisi. Algoritm algab mingist tipust ja liigub mööda ühte haru nii sügavale kui võimalik, enne kui ta liigub tagasi ja uurib teisi harusid. Siin on üks võimalik DFS implementatsioon Pythoni keeles:
+
+
+```python
+class Graaf:
+    def __init__(self):
+        self.graaf = {}
+
+    def lisa_tipp(self, tipp, naabrid):
+        self.graaf[tipp] = naabrid
+
+def dfs(graaf, algne_tipp, külastatud=None):
+    if külastatud is None:
+        külastatud = set()
+    print(algne_tipp)
+    külastatud.add(algne_tipp)
+    for naaber in graaf[algne_tipp]:
+        if naaber not in külastatud:
+            dfs(graaf, naaber, külastatud)
+
+# Graafi loomine
+minu_graaf = Graaf()
+minu_graaf.lisa_tipp(1, [2, 3])
+minu_graaf.lisa_tipp(2, [4, 5])
+minu_graaf.lisa_tipp(3, [6])
+minu_graaf.lisa_tipp(4, [])
+minu_graaf.lisa_tipp(5, [6])
+minu_graaf.lisa_tipp(6, [])
+
+# Alustame DFS-i esimesest tipust
+algne_tipp = 1
+dfs(minu_graaf.graaf, algne_tipp)
+```
+
+Selgitused:
+
+- `Graaf` klass loob graafi, kus tippudel on vastavad naabrid.
+- `dfs` funktsioon võtab graafi, algse tipu ja külastatud tipud ning kasutab rekursiooni, et liikuda sügavus-esmalt läbi graafi.
+- Algoritmi aja- ja ruumikomplekssuse analüüsimine sõltub konkreetsetest implementatsioonidetailidest ja graafi omadustest. Üldiselt on DFS aja- ja ruumikomplekssus \(O(V + E)\), kus \(V\) on tippude arv ja \(E\) on servade arv graafis. Ruumi puhul on keerukus \(O(V)\), kuna kasutatakse külastatud tippude hoidmiseks hulka.
