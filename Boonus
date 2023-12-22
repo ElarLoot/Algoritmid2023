@@ -1,0 +1,20 @@
+1. AVL-puu:
+   - Tasakaalustamine: AVL-puu säilitab tasakaalu, kus igal sõlmel on tasakaalufaktor, mis on erinev nende vasaku ja parema alamteepuu kõrguste vahest. 
+    Kui puu muutub tasakaalust välja, tehakse pöörded (pööramised), et säilitada tasakaalu.
+   - Optimeerimine: AVL-puud sobivad hästi otsingutele, kuna nende tasakaalutust tagajärjel tekib minimaalne tee puu tippude vahel. See tagab kiire otsinguoperatsiooni.
+
+2. Punase-must puu:
+   - Tasakaalustamine: Punase-must puu säilitab tasakaalu värvide abil (must või punane). Puu peab vastama mõnele tingimusele, näiteks kõik teed lehtedeni peavad sisaldama sama arvu musti sõlmi.
+   - Optimeerimine: Punase-must puud on efektiivsed andmestruktuurid, eriti sagedaste lisamiste ja kustutamiste korral. Need pakuvad head tasakaalu otsingu- ja muutmisoperatsioonide vahel.
+
+3. Splay-puu:
+   - Tasakaalustamine: Splay-puu rakendab sõlme sisseseadmise või päringu korral splay-operatsiooni, mis muudab sõlme puu juureks.
+   - Optimeerimine: Splay-puud on head dünaamilisele andmestruktuurile, kus teatud elemendid on sagedamini kasutatavad. Splay-operatsiooniga muutub hiljuti kasutatud element kiiresti juureks, 
+      pakkudes kiireid juurdepääsuoperatsioone.
+
+4. B-puu:
+   - Tasakaalustamine: B-puud on tasakaalustatud puud, millel on mitu last (haru). Neid kasutatakse laialdaselt andmebaasides ja failisüsteemides.
+   - Optimeerimine: B-puud võimaldavad tõhusat failide jagamist blokkideks ja on eriti kasulikud suurte andmemahtude haldamisel. Neil on head jõudlusomadused andmebaaside rakendustes.
+
+Iga tasakaalustamise algoritm pakub optimeerimisi vastavalt kasutatavale stsenaariumile. AVL-puud ja punase-mustad puud on head valikud otsinguteks, samas kui Splay-puud sobivad hästi dünaamiliste andmete korral. 
+B-puud on kasulikud suurte andmemahtude haldamiseks andmebaasides. Õige valik sõltub konkreetselt kasutusstsenaariumist ja operatsioonide sagedusest.
