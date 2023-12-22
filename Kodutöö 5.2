@@ -1,0 +1,28 @@
+Min-kuhi ja Max-kuhi teoreetiline analüüs
+
+1. Min-kuhi ja Max-kuhi omadused
+   - Min-kuhi: Min-kuhi on binaarne kuhja, kus iga sõlm (välja arvatud juursõlm) on väiksem kui tema vanem. See tähendab, et min-kuhi korral on väikseim element juursõlmes.
+   - Max-kuhi: Max-kuhi on binaarne kuhja, kus iga sõlm (välja arvatud juursõlm) on suurem kui tema vanem. Seega on max-kuhi korral suurim element juursõlmes.
+
+2. Aja- ja ruumikomplekssus
+
+   Aeg
+      - Lisamine (push): O(log n) aja keerukus, kus n on kuhja suurus.
+      - Eemaldamine (pop): O(log n) aja keerukus.
+      - Kuhja ehitamine (heapify): O(n) aja keerukus.
+      
+   Ruum
+      - O(n) ruumikomplekssus, kuna igal elemendil on vaja sõlm ja täiendavaid andmeid (nt võtmed).
+
+3. Kuhja struktuurid andmete sorteerimisel ja prioriteetjärjekordade haldamisel
+
+   Andmete sorteerimine
+      - Kuhja struktuurid, eriti min-kuhid, sobivad hästi sorteerimiseks.
+      - Heap Sort on üks tuntumaid näiteid, kus min-kuhi kasutatakse sorteerimiseks.
+      - Lisaks on kuhja sorteerimine stabiilne, mis tähendab, et sama võrdluse tulemusel ei muudeta järjekorda.
+      
+   Prioriteetjärjekorra haldamine
+      - Kuhja struktuurid on efektiivsed prioriteetjärjekordade haldamiseks.
+      - Min-kuhi võimaldab kiiret juurdepääsu väikseimale elemendile, samas kui max-kuhi võimaldab kiiret juurdepääsu suurimale elemendile.
+      - Dijkstra algoritm ja Huffmani koodid on näited rakendustest, kus kuhjad on olulised prioriteetide haldamisel.
+
