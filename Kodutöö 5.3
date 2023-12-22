@@ -1,0 +1,47 @@
+Binaarse Otsingupuu (BST) Teoreetiline Analüüs
+
+  1. Binaarse Otsingupuu (BST) Ülevaade
+   Definitsioon  
+   Binaarne otsingupuu on binaarne puu, kus iga sõlm vasakul alamhargnemisel on väiksem või võrdne sõlme võtmeväärtusega ja paremal alamhargnemisel suurem või võrdne.
+   
+   Põhielemendid
+      -  Sõlm 
+          Puu element, millel on võti ja kaks alamhargnemist (vasak ja parem).
+      - Juursõlm  
+          Puu sõlm, millel ei ole ülemist vanemat.
+      - Alamhargnemine 
+          Vasak ja parem, kusjuures vasak sisaldab väiksemaid väärtusi ja parem suuremaid.
+
+  2.  Puustruktuur ja Toimingud  
+   -Puustruktuur  
+      - Puu on struktureeritud hierarhiliselt, kus igal sõlmel on üks või kaks alamsõlme.
+   -Toimingud  
+      -  Otsimine   
+          Otsi puust elementi võtmeväärtuse alusel.
+      -Lisamine   
+          Lisa uus element puusse, järgides võtmeväärtuste suurust.
+      -Eemaldamine   
+          Eemalda puust element, järgides võtmeväärtuste suurust.
+
+  3.  Tasakaalustamata Puud ja Mõju BST Tõhususele  
+   -Probleem  
+      - Kui BST pole tasakaalus, võib see viia halva tõhususeni.
+      - Kui puu on kaldus (kõik elemendid on lisatud ühel harul), muutub puu kõrgus ja otsimis- ja lisamistoimingute keerukus suureks (O(n)).
+   -Optimeerimine  
+      - Tasakaalustatud puud, nagu AVL-puu või punase-must puu, saab kasutada optimeerimiseks.
+      - Tasakaalustatud puud hoiavad kõrguse kontrolli all, tagades, et otsimis- ja lisamistoimingute keerukus jääb O(log n) tasemele, kus n on puu elementide arv.
+
+  4.  Teoreetiline Optimeerimine  
+   -AVL-puu  
+      - Garanteerib tasakaalustatust, kuid võib vajada rohkem pöördeid.
+      - Otsimise, lisamise ja eemaldamise toimingud on O(log n).
+      
+   -Punane-must puu  
+      - Tasakaalustatud ja nõuab vähem pöördeid kui AVL-puu.
+      - Otsimise, lisamise ja eemaldamise toimingud on O(log n).
+
+  5.  Kokkuvõte  
+   - BST on efektiivne struktuur otsimiseks, lisamiseks ja eemaldamiseks.
+   - Tasakaalustamata puu võib põhjustada tõhususe probleeme, mida saab lahendada tasakaalustatud puudega.
+
+Tasakaalustatud puude kasutamine (nagu AVL-puu või punase-must puu) tagab, et otsimise ja manipuleerimise toimingud on teoreetiliselt optimeeritud ning püsivad O(log n) keerukusel, olenemata puu suurusest.
