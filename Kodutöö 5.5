@@ -1,28 +1,29 @@
 AVL Puu
 
- - AVL-puu on tasakaalustatud binaarpuu, kus igal sõlmel on kõrguse atribuut, ja iga sõlme kõrgus on tasakaalustatud ehk erinevus kõrgeima ja madalaima alampuu kõrguse vahel on antud sõlme puhul kõige rohkem ±1. Kui see 
+ - AVL-puu on tasakaalustatud binaarpuu, kus igal sõlmel on kõrguse atribuut ja iga sõlme kõrgus on tasakaalustatud ehk erinevus kõrgeima ja madalaima alampuu kõrguse vahel on antud sõlme puhul kõige rohkem ±1. Kui see 
    tingimus rikutakse, tehakse pööre, et taastada tasakaal.
 
 
 Peamised omadused
 
-1. Tasakaalustatus: Iga sõlme kõrguse tasakaal tagatakse, et vältida puu degenereerumist lihtsaks liitpuuks ja tagada otsingute tõhusus.
+1. Tasakaalustatus- Iga sõlme kõrguse tasakaal tagatakse, et vältida puu degenereerumist lihtsaks liitpuuks ja tagada otsingute tõhusus.
   
-2. Pööramine: Puu tasakaalu taastamiseks teostatakse pöördeid - ühepoolsed või kahepoolsed pöörded, sõltuvalt rikkumise tüübist.
+2. Pööramine- Puu tasakaalu taastamiseks teostatakse pöördeid - ühepoolsed või kahepoolsed pöörded, sõltuvalt rikkumise tüübist.
   
-3. Kõrgus: Puu kõrgus on peamine tegur tasakaalu tagamisel. Tasakaal hoiab puu kõrguse O(log n) piires, kus n on sõlmede arv puus.
+3. Kõrgus- Puu kõrgus on peamine tegur tasakaalu tagamisel. Tasakaal hoiab puu kõrguse O(log n) piires, kus n on sõlmede arv puus.
 
-Punane-Must Puu:
 
-Punase-musta puu on veel üks tasakaalustatud binaarpuu, kuid tasakaalu tagatakse läbi värvimise. Igal sõlmel on lisaks tavapärastele andmetele värviatribuut, mis võib olla punane või must.
+Punane-Must Puu
+  - Punase-musta puu on veel üks tasakaalustatud binaarpuu, kuid tasakaalu tagatakse läbi värvimise. Igal sõlmel on lisaks tavapärastele andmetele värviatribuut, mis võib olla punane või must.
 
-Peamised omadused:
 
-1. Värvimine: Sõlmed on värvitud punaseks või mustaks vastavalt kindlatele reeglitele, mille järgimine tagab tasakaalu.
+Peamised omadused
+
+1. Värvimine- Sõlmed on värvitud punaseks või mustaks vastavalt kindlatele reeglitele, mille järgimine tagab tasakaalu.
   
-2. Mustade kõrguste tasakaal: Iga teele järgneva musta värvi sõlme koguarv on sama, tagades tasakaalu.
+2. Mustade kõrguste tasakaal- Iga teele järgneva musta värvi sõlme koguarv on sama, tagades tasakaalu.
 
-3. Pööramine: Punase-musta puu kasutab pööramist sarnaselt AVL-puule tasakaalu taastamiseks.
+3. Pööramine- Punase-musta puu kasutab pööramist sarnaselt AVL-puule tasakaalu taastamiseks.
 
 
 Võrdlus
@@ -31,14 +32,14 @@ Võrdlus
    - AVL puu pakub kiiremaid otsinguid võrreldes punase-musta puuga, kuna see hoiab puu kõrguse väiksemana.
    - Punase-must puu võib olla tõhusam lisamise ja eemaldamise operatsioonide puhul, kuna see ei ole nii tundlik tasakaalu suhtes.
 
-2. Mälu vajadus:
+2. Mälu vajadus
    - AVL puu võib nõuda rohkem mälu, kuna iga sõlm hoiab kõrguse atribuuti.
    - Punase-must puu kasutab vähem mälu, kuna värviatribuut vajab vähem bitti kui täisarvuline kõrgus.
 
 
 Rakendused
 
-- AVL Puu:
+- AVL Puu
    - Kasutatakse rakendustes, kus otsingud on sagedasemad kui lisamised või eemaldamised, näiteks andmebaasid ja indeksid.
 
 - Punane-Must Puu
