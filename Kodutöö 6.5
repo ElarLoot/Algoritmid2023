@@ -1,15 +1,22 @@
-Graafide värvimise probleem on diskreetse matemaatika ja graafiteooria haru, kus eesmärgiks on määrata iga graafi tipule värv nii, et igas tipu paaril, mis on omavahel otse ühendatud ehk naabertipud, oleksid erinevad värvid. Seda nimetatakse tihtipeale "graafi värvimiseks" või "graafi värviliseks märgistamiseks". Probleemi üldine eesmärk on leida graafi värvimise korraldus, mis täidaks selle reegli ja kasutaks võimalikult vähe värve.
+Graafide Värvimise Probleem
 
-**Probleemi olemus:**
-Graafide värvimise probleem on NP-täielik, mis tähendab, et selle lahendamine on teoreetiliselt raske isegi suurte arvutite jaoks. Seda probleemi on uuritud seoses erinevate rakendustega, sealhulgas võrgunduste (networks), kaartide (maps), ja ajakava (scheduling) probleemide lahendamisega.
+Graafide värvimise probleem on diskreetse matemaatika ja graafiteooria haru, kus eesmärgiks on määrata iga graafi tipule värv nii, et igas tipu paaril, mis on omavahel otse ühendatud ehk naabertipud 
+oleksid erinevad värvid. Seda nimetatakse tihtipeale "graafi värvimiseks" või "graafi värviliseks märgistamiseks". Probleemi üldine eesmärk on leida graafi värvimise korraldus, mis täidaks selle reegli ja kasutaks võimalikult vähe värve.
 
-Graafide värvimisel on oluline roll nii teoreetilises graafiteoorias kui ka praktilistes rakendustes. See on oluline ka algoritmide analüüsis ja keerukuse uurimisel, kuna see kuulub NP-täielike probleemide hulka, mis tähendab, et sellele pole teada efektiivset lahendust polünoomiaja kompleksusega.
+Probleemi olemus
+- Graafide värvimise probleem on NP-täielik, mis tähendab, et selle lahendamine on teoreetiliselt raske isegi suurte arvutite jaoks. Seda probleemi on uuritud seoses erinevate rakendustega, 
+  sealhulgas võrgunduste (networks), kaartide (maps), ja ajakava (scheduling) probleemide lahendamisega.
 
-**Tähtsus arvutiteaduses:**
-1. **Värvi kasutamine ressursside jaotamisel:** Graafide värvimist saab kasutada ressursside, nagu protsessorite või kanalite, jaotamisel. Näiteks arvutivõrgu topoloogia kujutamine graafina võimaldab optimeerida ressursside kasutamist, tagades, et naabertipud (arvutid) jagavad ressursse ilma omavahelise segunemiseta.
+- Graafide värvimisel on oluline roll nii teoreetilises graafiteoorias kui ka praktilistes rakendustes. See on oluline ka algoritmide analüüsis ja keerukuse uurimisel, 
+  kuna see kuulub NP-täielike probleemide hulka, mis tähendab, et sellele pole teada efektiivset lahendust polünoomiaja kompleksusega.
 
-2. **Konfliktide lahendamine:** Graafide värvimist saab rakendada konfliktide lahendamisel, kus ressursse tuleb jagada mitme kasutaja või rakenduse vahel. Kui igale kasutajale või rakendusele vastab graafis olev tipp, saab tippe värvidega märgistades tagada, et kaks naabertippi (kasutajat või rakendust) ei jaga sama ressurssi samaaegselt, vähendades seeläbi konflikte.
+Tähtsus arvutiteaduses
+1. Värvi kasutamine ressursside jaotamisel Graafide värvimist saab kasutada ressursside, nagu protsessorite või kanalite, jaotamisel. Näiteks arvutivõrgu topoloogia kujutamine
+   graafina võimaldab optimeerida ressursside kasutamist, tagades, et naabertipud (arvutid) jagavad ressursse ilma omavahelise segunemiseta.
 
-3. **Ajakava koostamine:** Graafide värvimist kasutatakse ka ajakava koostamisel, kus iga tipp võib vastata teatud ülesandele või sündmusele. Värvide märgistamine aitab tagada, et kaks naabertippi ei kattu ajaliselt, mis on oluline ajakava optimeerimiseks.
+2. Konfliktide lahendamine Graafide värvimist saab rakendada konfliktide lahendamisel, kus ressursse tuleb jagada mitme kasutaja või rakenduse vahel.
+   Kui igale kasutajale või rakendusele vastab graafis olev tipp, saab tippe värvidega märgistades tagada, et kaks naabertippi (kasutajat või rakendust) ei jaga sama ressurssi samaaegselt,
+   vähendades seeläbi konflikte.
 
-Kokkuvõttes on graafide värvimise probleem oluline nii teoreetilises graafiteoorias kui ka praktilistes rakendustes, aidates optimeerida ressursikasutust ja lahendada konflikte erinevates arvutiteaduse valdkondades.
+3. Ajakava koostamine Graafide värvimist kasutatakse ka ajakava koostamisel, kus iga tipp võib vastata teatud ülesandele või sündmusele. Värvide märgistamine aitab tagada, et kaks naabertippi ei kattu ajaliselt, mis on 
+   oluline ajakava optimeerimiseks.
