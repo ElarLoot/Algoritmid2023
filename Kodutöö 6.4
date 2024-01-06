@@ -1,23 +1,31 @@
-Bellman-Fordi Algoritmi Kirjeldus:
+Bellman-Fordi Algoritmi Kirjeldus
 
-Bellman-Fordi algoritm on lühima tee probleemi lahendamiseks graafides, kus kaalud võivad olla negatiivsed. Algoritmi eesmärk on leida iga tipu suhtes lühim tee algustipust kõikide teiste tippudeni.
+ - Bellman-Fordi algoritm on lühima tee probleemi lahendamiseks graafides, kus kaalud võivad olla negatiivsed. Algoritmi eesmärk on leida iga tipu suhtes lühim tee algustipust kõikide teiste tippudeni.
 
-Algoritmi tööpõhimõte:
+ 
+Algoritmi tööpõhimõte
 
 1. Alustatakse kõigi tippude kauguste initsialiseerimisega lõpmatu väärtusega (välja arvatud algustipp, mille kaugus on 0).
 2. Seejärel korratakse iga tipu puhul graafi servade läbimist, värskendades iga naabri kaugust vastavalt lühimale leitud tee pikkusele.
-3. Protsess korratakse korduvalt, kuni ei ole enam võimalik kaugusi värskendada. Kui lõpptulemus on erinev nullist, siis see näitab, et graafis on negatiivne tsükkel, sest negatiivsete kauguste korduv lisamine muudab lõpptulemuse.
+3. Protsess korratakse korduvalt, kuni ei ole enam võimalik kaugusi värskendada. Kui lõpptulemus on erinev nullist, siis see näitab, et graafis on negatiivne tsükkel, 
+   sest negatiivsete kauguste korduv lisamine muudab lõpptulemuse.
 
-Erinevused Dijkstra Algoritmist:
 
-1. Kaalu Liikumine: Dijkstra algoritm eeldab, et graafi kaalud on mitte-negatiivsed. Bellman-Fordi algoritm võimaldab ka negatiivseid kaalusid, kuid on võimeline tuvastama ka negatiivseid tsükleid.
+Erinevused Dijkstra Algoritmist
 
-2. Optimeerimise Viis: Dijkstra kasutab ahelate optimeerimiseks ahelate lõikamise meetodit, mis võimaldab tal jätta välja mõned tippudesse minevad ahelad. Bellman-Fordi algoritm aga värskendab kõigi tippude kaugusi iga kord.
+1. Kaalu Liikumine Dijkstra algoritm eeldab, et graafi kaalud on mitte-negatiivsed. Bellman-Fordi algoritm võimaldab ka negatiivseid kaalusid, 
+   kuid on võimeline tuvastama ka negatiivseid tsükleid.
+2. Optimeerimise Viis Dijkstra kasutab ahelate optimeerimiseks ahelate lõikamise meetodit, mis võimaldab tal jätta välja mõned tippudesse minevad ahelad. 
+   Bellman-Fordi algoritm aga värskendab kõigi tippude kaugusi iga kord.
 
-Negatiivsete Tsüklite Tuvastamine:
 
-Bellman-Fordi algoritm suudab tuvastada negatiivseid tsükleid, sest see käib läbi iga serva iga tipu korral ja värskendab kaugusi. Kui algoritm lõpetab töö ja mõne tipu kaugus on endiselt muutunud, siis see näitab, et graaf sisaldab negatiivset tsüklit.
+Negatiivsete Tsüklite Tuvastamine
 
-Praktiline Tähtsus:
+- Bellman-Fordi algoritm suudab tuvastada negatiivseid tsükleid, sest see käib läbi iga serva iga tipu korral ja värskendab kaugusi. Kui algoritm lõpetab töö ja mõne tipu kaugus on endiselt muutunud, 
+  siis see näitab, et graaf sisaldab negatiivset tsüklit.
 
-Negatiivsed tsüklid võivad põhjustada probleeme, eriti lühima tee leidmisel. Näiteks navigatsioonisüsteemides võib negatiivne kaal esindada ummikuid või muud takistust, ning negatiivne tsükkel võib põhjustada lõputut ringliikumist. Bellman-Fordi algoritm võimaldab selliste olukordade tuvastamist, et rakendada vajalikke meetmeid, näiteks teavitada kasutajat võimalikust ebatavalisest teejooksust või leida alternatiivseid marsuute.
+
+Praktiline Tähtsus
+
+- Negatiivsed tsüklid võivad põhjustada probleeme, eriti lühima tee leidmisel. Näiteks navigatsioonisüsteemides võib negatiivne kaal esindada ummikuid või muud takistust ning negatiivne tsükkel võib põhjustada lõputut 
+  ringliikumist. Bellman-Fordi algoritm võimaldab selliste olukordade tuvastamist, et rakendada vajalikke meetmeid, näiteks teavitada kasutajat võimalikust ebatavalisest teejooksust või leida alternatiivseid marsuute.
