@@ -1,8 +1,10 @@
-Dijkstra Algoritmi Kirjeldus:
+Dijkstra Algoritmi Kirjeldus
+  - Dijkstra algoritm on graafilise teeotsingu algoritm, mida kasutatakse lühima tee leidmiseks kaalutud graafides, kus iga serva kaal näitab kahe tipu vahelist kaugust või kulu. 
+    Algoritm kasutab ahelat, mis laieneb järkjärgult tipust tipuni, hoides meeles iga tipu teadaolevat lühimat kaugust alguspunktist. Algoritmi peamine eesmärk on leida kõige lühem tee algpunktist kõikidesse teistesse 
+    tippudesse graafis.
 
-Dijkstra algoritm on graafilise teeotsingu algoritm, mida kasutatakse lühima tee leidmiseks kaalutud graafides, kus iga serva kaal näitab kahe tipu vahelist kaugust või kulu. Algoritm kasutab ahelat, mis laieneb järk-järgult tipust tipuni, hoides meeles iga tipu teadaolevat lühimat kaugust alguspunktist. Algoritmi peamine eesmärk on leida kõige lühem tee algpunktist kõikidesse teistesse tippudesse graafis.
 
-Dijkstra Algoritmi Tööpõhimõte:
+Dijkstra Algoritmi Tööpõhimõte
 
 1. Alustades algpunktist, määratakse algkaugus nulliks ja kõik teised tipud saavad alguses kauguse "lõpmatuks" (või väga suureks arvuks).
 
@@ -14,14 +16,14 @@ Dijkstra Algoritmi Tööpõhimõte:
 
 5. Korratakse samme 2-4 seni, kuni kõik tipud on märgitud käsitletuks või lõpuks jõutakse soovitud tipuni.
 
-Dijkstra Algoritmi Efektiivsus:
 
-*Efektiivne:*
+Dijkstra Algoritmi Efektiivsus
+Efektiivne
 - Dijkstra algoritm on eriti efektiivne ühtlaste kaugustega graafides, kus kõik servad on sama "kvaliteediga".
 - Sobib hästi lühimate tee leidmiseks linnade või võrguühenduste vahel, kus tee kulud on hästi mõõdetavad ja suhteliselt stabiilsed.
 
-*Ebaefektiivne:*
+Ebaefektiivne
 - Algoritm võib olla ebaefektiivne suurte graafide puhul, kus on palju tippe ja servu, kuna see nõuab palju mälu ja arvutusressursse.
 - Ei tööta hästi graafides, kus kaugused muutuvad dünaamiliselt, kuna see ei suuda kohanduda kiirete muutustega tee pikkustes.
 
-Lühidalt öeldes on Dijkstra algoritm efektiivne stabiilsete ja suhteliselt lihtsate graafide korral, kuid võib osutuda ebaefektiivseks suurte või dünaamiliste graafide puhul.
+Dijkstra algoritm efektiivne stabiilsete ja suhteliselt lihtsate graafide korral, kuid võib osutuda ebaefektiivseks suurte või dünaamiliste graafide puhul.
