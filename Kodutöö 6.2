@@ -1,7 +1,9 @@
-Sügavus-Esmalt Otsing (DFS) on üks graafi läbimise algoritme, mis kasutab sügavust esmalt lähenemisviisi. Algoritm algab mingist tipust ja liigub mööda ühte haru nii sügavale kui võimalik, enne kui ta liigub tagasi ja uurib teisi harusid. Siin on üks võimalik DFS implementatsioon Pythoni keeles:
+Sügavus-Esmalt Otsing (DFS) on üks graafi läbimise algoritme, mis kasutab sügavust esmalt lähenemisviisi. 
+Algoritm algab mingist tipust ja liigub mööda ühte haru nii sügavale kui võimalik, enne kui ta liigub tagasi ja uurib teisi harusid. 
 
 
-```python
+DFS implementatsioon Pythoni keeles:
+
 class Graaf:
     def __init__(self):
         self.graaf = {}
@@ -32,7 +34,7 @@ algne_tipp = 1
 dfs(minu_graaf.graaf, algne_tipp)
 ```
 
-Selgitused:
+Selgitused
 
 - `Graaf` klass loob graafi, kus tippudel on vastavad naabrid.
 - `dfs` funktsioon võtab graafi, algse tipu ja külastatud tipud ning kasutab rekursiooni, et liikuda sügavus-esmalt läbi graafi.
