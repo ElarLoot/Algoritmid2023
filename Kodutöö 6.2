@@ -1,5 +1,6 @@
-Sügavus-Esmalt Otsing (DFS) on üks graafi läbimise algoritme, mis kasutab sügavust esmalt lähenemisviisi. 
-Algoritm algab mingist tipust ja liigub mööda ühte haru nii sügavale kui võimalik, enne kui ta liigub tagasi ja uurib teisi harusid. 
+Sügavus-Esmalt Otsing (DFS) 
+- On graafi läbimise algoritme, mis kasutab sügavust esmalt lähenemisviisi. 
+  Algoritm algab mingist tipust ja liigub mööda ühte haru nii sügavale kui võimalik, enne kui ta liigub tagasi ja uurib teisi harusid. 
 
 
 DFS implementatsioon Pythoni keeles:
@@ -32,10 +33,40 @@ minu_graaf.lisa_tipp(6, [])
 # Alustame DFS-i esimesest tipust
 algne_tipp = 1
 dfs(minu_graaf.graaf, algne_tipp)
-```
+
 
 Selgitused
 
-- `Graaf` klass loob graafi, kus tippudel on vastavad naabrid.
-- `dfs` funktsioon võtab graafi, algse tipu ja külastatud tipud ning kasutab rekursiooni, et liikuda sügavus-esmalt läbi graafi.
-- Algoritmi aja- ja ruumikomplekssuse analüüsimine sõltub konkreetsetest implementatsioonidetailidest ja graafi omadustest. Üldiselt on DFS aja- ja ruumikomplekssus \(O(V + E)\), kus \(V\) on tippude arv ja \(E\) on servade arv graafis. Ruumi puhul on keerukus \(O(V)\), kuna kasutatakse külastatud tippude hoidmiseks hulka.
+1. Graaf klass
+    - `Graaf` klass on loodud selleks, et esindada graafi, kus tipud (või sõlmepunktid) on seotud naabritega. 
+    - Konstruktoris (`__init__`) luuakse tühi sõnastik (`self.graaf`), mis hiljem täidetakse tippude ja neile vastavate 
+      naabritega.
+
+2. `lisa_tipp` meetod
+    - See meetod võimaldab lisada uue tipu graafi koos selle naabritega.
+    - Näiteks `minu_graaf.lisa_tipp(1, [2, 3])` lisab tipu 1 koos naabritega 2 ja 3.
+
+3. `dfs` funktsioon
+    - See funktsioon teostab sügavus-esmalt otsingu (DFS) algoritmi.
+    - Võtab argumendina graafi, algse tipu ja külastatud tippude hulga (vaikeväärtusena on see `None` ja funktsioon loob selle ise tühjana).
+    - Rekursiivselt liigutakse graafi tipust naabertippudesse sügavale, kuni enam naabreid pole või kõik naabrid on juba külastatud.
+    - Igas sammu käigus lisatakse külastatud tippude hulka ja tipu väärtus prinditakse välja.
+
+4. Graafi loomine ja DFS-i käivitamine
+    - Loodud on näidisgraaf `minu_graaf`, kus iga tipp on seotud teatud naabritega.
+    - Alustatakse DFS-i esimesest tipust (`algne_tipp = 1`) selleks, et külastada graafi sügavus-esmalt.
+
+5. Aja- ja ruumikomplekssuse analüüs
+    - Algoritmi aja- ja ruumikomplekssus sõltub konkreetsetest implementatsioonidetailidest ja graafi omadustest.
+    - Üldiselt on DFS aja- ja ruumikomplekssus O(V + E), kus V on tippude arv ja E on servade arv graafis.
+    - Ruumikomplekssus on O(V), kuna külastatud tippude hoidmiseks kasutatakse hulka, mis võib maksimaalselt sisaldada kõiki 
+      graafi tippe.
+
+
+
+
+
+
+
+
+
