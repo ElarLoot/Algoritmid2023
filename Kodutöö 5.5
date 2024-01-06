@@ -1,8 +1,10 @@
-AVL Puu:
+AVL Puu
 
-AVL-puu on tasakaalustatud binaarpuu, kus igal sõlmel on kõrguse atribuut, ja iga sõlme kõrgus on tasakaalustatud ehk erinevus kõrgeima ja madalaima alampuu kõrguse vahel on antud sõlme puhul kõige rohkem ±1. Kui see tingimus rikutakse, tehakse pööre, et taastada tasakaal.
+ - AVL-puu on tasakaalustatud binaarpuu, kus igal sõlmel on kõrguse atribuut, ja iga sõlme kõrgus on tasakaalustatud ehk erinevus kõrgeima ja madalaima alampuu kõrguse vahel on antud sõlme puhul kõige rohkem ±1. Kui see 
+   tingimus rikutakse, tehakse pööre, et taastada tasakaal.
 
-Peamised omadused:
+
+Peamised omadused
 
 1. Tasakaalustatus: Iga sõlme kõrguse tasakaal tagatakse, et vältida puu degenereerumist lihtsaks liitpuuks ja tagada otsingute tõhusus.
   
@@ -22,9 +24,10 @@ Peamised omadused:
 
 3. Pööramine: Punase-musta puu kasutab pööramist sarnaselt AVL-puule tasakaalu taastamiseks.
 
-Võrdlus:
 
-1. Tõhusus:
+Võrdlus
+
+1. Tõhusus
    - AVL puu pakub kiiremaid otsinguid võrreldes punase-musta puuga, kuna see hoiab puu kõrguse väiksemana.
    - Punase-must puu võib olla tõhusam lisamise ja eemaldamise operatsioonide puhul, kuna see ei ole nii tundlik tasakaalu suhtes.
 
@@ -32,12 +35,13 @@ Võrdlus:
    - AVL puu võib nõuda rohkem mälu, kuna iga sõlm hoiab kõrguse atribuuti.
    - Punase-must puu kasutab vähem mälu, kuna värviatribuut vajab vähem bitti kui täisarvuline kõrgus.
 
-Rakendused:
+
+Rakendused
 
 - AVL Puu:
    - Kasutatakse rakendustes, kus otsingud on sagedasemad kui lisamised või eemaldamised, näiteks andmebaasid ja indeksid.
 
-- Punane-Must Puu:
+- Punane-Must Puu
    - Sobib rakendustesse, kus lisamised ja eemaldamised on sagedasemad kui otsingud, kuna see on veidi vähem tundlik tasakaalu muutumisele.
 
 Valik sõltub rakendusest ja konkreetsetest operatsioonidest, mida kõige rohkem kasutatakse.
