@@ -1,41 +1,52 @@
-Ma ei saa otse programmeerimiskoodi käivitada ega otse implementatsiooni esitada, kuid ma saan anda sulle näite, kuidas BFS-algoritmi saaks implementeerida Pythoni programmeerimiskeeles koos graafi näitega.
+Laius-Esmalt Otsing (Breadth-First Search, BFS) Implementatsioon
 
-```python
+Pythoni keeles implementatsioon
+
 from collections import deque
 
-def bfs(graph, start):
-    visited = set()
-    queue = deque([start])
+class Graaf:
+    def __init__(self):
+        self.graaf = {}
 
-    while queue:
-        node = queue.popleft()
-        if node not in visited:
-            print(node, end=" ")  # Väljund: külastatud sõlm
-            visited.add(node)
-            queue.extend(graph[node] - visited)
+    def lisa_tipp(self, tipp, naabrid):
+        self.graaf[tipp] = naabrid
 
-# Graafi näide esitatakse sõlmede ja nende naabersõlmede hulgana
-graph = {
-    'A': {'B', 'C'},
-    'B': {'A', 'D', 'E'},
-    'C': {'A', 'F', 'G'},
-    'D': {'B'},
-    'E': {'B', 'H'},
-    'F': {'C'},
-    'G': {'C'},
-    'H': {'E'}
-}
+def bfs(graaf, algne_tipp):
+    külastatud = set()
+    järjekord = deque([algne_tipp])
 
-# Alustatakse laius-esmalt otsingut sõlmest 'A'
-print("BFS algab:")
-bfs(graph, 'A')
-```
+    while järjekord:
+        hetke_tipp = järjekord.popleft()
+        if hetke_tipp not in külastatud:
+            print(hetke_tipp)
+            külastatud.add(hetke_tipp)
+            järjekord.extend(graaf[hetke_tipp])
 
-Selgitused:
+# Näidisgraafi loomine
+minu_graaf = Graaf()
+minu_graaf.lisa_tipp(1, [2, 3])
+minu_graaf.lisa_tipp(2, [4, 5])
+minu_graaf.lisa_tipp(3, [6])
+minu_graaf.lisa_tipp(4, [])
+minu_graaf.lisa_tipp(5, [6])
+minu_graaf.lisa_tipp(6, [])
 
-- `graph` esindab suunatud graafi, kus iga sõlm on seotud naabersõlmedega.
-- `bfs` funktsioon võtab graafi ja algussõlme ning rakendab laius-esmalt otsingu algoritmi.
-- Algoritm kasutab järjekorda (`queue`), et hoida järgmisi külastamist ootavaid sõlmi.
-- `visited` hoiab juba külastatud sõlmi, et vältida tsüklit.
+# Alustame BFS-i esimesest tipust
+algne_tipp = 1
+bfs(minu_graaf.graaf, algne_tipp)
 
-Kui käivitad selle Pythoni koodi, näed, kuidas BFS algoritm liigub graafis laialt, külastades iga sõlme samal tasemel enne sügavamale minemist.
+
+Selgitused
+
+1. `bfs` funktsioon
+    - See funktsioon teostab laius-esmalt otsingu (BFS) algoritmi.
+    - Kasutab järjekorda (deque), et hoida tippe, mida tuleb veel külastada. Alguses sisaldab see ainult algset tippu.
+    - Kuni järjekord ei ole tühi, võetakse sellest esimene element, külastatakse seda, ja lisatakse järjekorda selle naabertipud (kui need pole veel külastatud).
+    - See jätkub seni, kuni kõik tipud on külastatud.
+
+2. Näidisgraafi loomine ja BFS-i käivitamine
+    - Näidisgraaf `minu_graaf`, kus iga tipp on seotud teatud naabritega.
+    - Alustatakse BFS-i esimesest tipust (`algne_tipp = 1`) selleks, et külastada graafi laius-esmalt.
+
+
+
